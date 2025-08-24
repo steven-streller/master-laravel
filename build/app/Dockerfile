@@ -26,6 +26,9 @@ FROM php:8.4-fpm-alpine3.22@sha256:5f54968e4f26b46e8d6f4b1f3b65b115b3279bd60c737
 # PHP-Erweiterungen für Laravel
 RUN docker-php-ext-install pdo pdo_mysql
 
+# FPM Pool-Konfiguration kopieren
+COPY www.conf /usr/local/etc/php-fpm.d/www.conf
+
 WORKDIR /var/www/html
 
 RUN chown root:root /var/www/html && chmod 755 /var/www/html
