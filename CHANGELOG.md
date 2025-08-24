@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/steven-streller/master-laravel/compare/v1.1.2...v1.2.0) (2025-08-24)
+
+
+### Features
+
+* add FPM pool configuration for PHP in Dockerfile ([e91b73e](https://github.com/steven-streller/master-laravel/commit/e91b73e4cdd17536c3e1cedbb6a1a3902bb73084))
+
 ## [1.1.2](https://github.com/steven-streller/master-laravel/compare/v1.1.1...v1.1.2) (2025-08-24)
 
 
