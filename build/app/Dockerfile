@@ -38,6 +38,7 @@ RUN mkdir -p  storage/framework/cache \
 # Artefakte aus den vorherigen Stages
 COPY public/index.php public/index.php
 COPY --from=composer /app/vendor ./vendor
+COPY --from=composer /app/composer.json ./
 COPY --from=composer /app/composer.lock ./
 COPY --from=nodebuild /app/package-lock.json ./
 COPY --from=nodebuild /app/public/build/manifest.json ./public/build/manifest.json
