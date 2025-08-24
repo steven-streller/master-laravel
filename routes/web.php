@@ -11,6 +11,7 @@ Route::get('/livez', fn() => response()->json(['status' => 'live']));
 Route::get('/readyz', function () {
     try {
         \DB::connection()->getPdo();
+        
         return response()->json(['status' => 'ready']);
     } catch (\Exception $e) {
         return response()->json(['status' => 'not ready'], 503);
