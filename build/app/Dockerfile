@@ -31,9 +31,8 @@ WORKDIR /var/www/html
 RUN chown root:root /var/www/html && chmod 755 /var/www/html
 
 RUN mkdir -p  storage/framework/cache \
-              storage/framework/sesssions \
+              storage/framework/sessions \
               storage/framework/views \
-              storage/logs \
           &&  chown -R www-data:www-data storage
 
 # Artefakte aus den vorherigen Stages
@@ -52,3 +51,5 @@ COPY routes/ routes/
 COPY resources/ resources/
 
 USER www-data
+
+EXPOSE 9000
