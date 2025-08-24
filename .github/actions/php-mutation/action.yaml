@@ -1,0 +1,22 @@
+name: PHP Mutation Testing
+description: Runs mutation tests with Infection, optionally with MSI gate
+inputs:
+  msi-gate:
+    description: 'Enable MSI gate (true/false)'
+    required: false
+    default: 'false'
+  msi-threshold:
+    description: 'MSI threshold in percent (e.g. 80)'
+    required: false
+    default: '80'
+runs:
+  using: composite
+  steps:
+    - name: Run Infection (Mutation Testing)
+      run: |
+        if [ "${{ inputs.msi-gate }}" = "true" ]; then
+          ./vendor/bin/infection --configuration=infection.json --logger-github=true --min-msi=${{ inputs.msi-threshold }}
+        else
+          ./vendor/bin/infection --configuration=infection.json --logger-github=true
+        fi
+      shell: bash

@@ -1,0 +1,54 @@
+name: "[CI] Fastlane"
+
+on:
+  push:
+    branches-ignore: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: fastlane-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  fastlane:
+    name: "CI Checks & Unit Tests"
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+
+    steps:
+      - name: "Checkout Repository"
+        uses: actions/checkout@v5
+
+      - name: "Setup PHP Environment"
+        uses: ./.github/actions/php-setup
+        with:
+          php-version: 8.4
+
+      - name: "Code Style Linting (Laravel Pint)"
+        uses: ./.github/actions/php-lint
+        with:
+          lint-gate: false
+        
+      - name: "Static Code Analysis (Larastan)"
+        uses: ./.github/actions/php-static-code-analysis
+
+      - name: "Run PHP Unit & Feature Tests"
+        uses: ./.github/actions/php-unit
+        with:
+          coverage-gate: false
+
+      - name: "Run Mutation Tests"
+        uses: ./.github/actions/php-mutation
+        with:
+          msi-gate: false
+
+      - name: "Secret Scan (Gitleaks)"
+        uses: ./.github/actions/gitleaks-check
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: "Vulnerability Scan (Trivy)"
+        uses: ./.github/actions/trivy-repo-scan

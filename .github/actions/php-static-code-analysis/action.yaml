@@ -1,0 +1,13 @@
+
+description: Runs PHPStan for static code analysis with configurable memory limit
+inputs:
+  memory-limit:
+    description: 'Memory limit for PHPStan (e.g. 1G, 2G)'
+    required: false
+    default: '2G'
+runs:
+  using: composite
+  steps:
+    - name: Run PHPStan
+      run: ./vendor/bin/phpstan analyse --memory-limit=${{ inputs.memory-limit }} --error-format=github --configuration=phpstan.neon --no-progress
+      shell: bash

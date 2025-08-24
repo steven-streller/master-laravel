@@ -1,0 +1,24 @@
+name: PHP Lint
+description: Lints the code with Laravel Pint. With lint-gate=true, code is fixed and committed; with lint-gate=false, only checked (--test).
+inputs:
+  lint-gate:
+    description: 'If true, code is automatically fixed and committed. If false, only checked (--test).'
+    required: false
+    default: 'false'
+runs:
+  using: composite
+  steps:
+    - name: Run Pint (Test or Fix)
+      run: |
+        if [ "${{ inputs.lint-gate }}" = "true" ]; then
+          ./vendor/bin/pint -v
+        else
+          ./vendor/bin/pint --test -n
+        fi
+      shell: bash
+
+    - name: Commit linted files
+      if: inputs.lint-gate == 'true'
+      uses: stefanzweifel/git-auto-commit-action@v5
+      with:
+        commit_message: 'style: auto-fixed by Laravel Pint'

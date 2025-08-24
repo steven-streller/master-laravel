@@ -1,0 +1,84 @@
+name: "[CI] PR Quality Gates"
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  pr-gates:
+    runs-on: ubuntu-24.04
+    strategy:
+      matrix:
+        php-version: [8.2, 8.3, 8.4]
+
+    name: Intensive Quality Gates (PHP ${{ matrix.php-version }})
+    
+    steps:
+      - name: "Checkout Repository"
+        uses: actions/checkout@v5
+
+      - name: "Setup PHP Environment"
+        uses: ./.github/actions/php-setup
+        with:
+          php-version: ${{ matrix.php-version }}
+
+      - name: "Code Style Linting (Laravel Pint)"
+        if: matrix.php-version == '8.4'
+        uses: ./.github/actions/php-lint
+        with:
+          lint-gate: true
+          
+      - name: "Static Code Analysis (Larastan)"
+        uses: ./.github/actions/php-static-code-analysis
+
+      - name: "Code Coverage"
+        uses: ./.github/actions/php-unit
+        with:
+          coverage-gate: true
+          coverage-threshold: 30
+      
+      - name: "Run Mutation Tests"
+        uses: ./.github/actions/php-mutation
+        with:
+          msi-gate: true
+          msi-threshold: 80
+
+      - name: "Database Migration Check"
+        run: |
+          touch database/database.sqlite
+          php artisan migrate --pretend --no-interaction
+
+      - name: "Composer Audit"
+        run: composer audit
+
+      - name: "NPM Audit"
+        run: npm audit
+
+      - name: "Build Assets"
+        run: |
+          npm install
+          npm run build
+
+      - name: "Secret Scan (Gitleaks)"
+        if: matrix.php-version == '8.4'
+        uses: ./.github/actions/gitleaks-check
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: "Dependency Review"
+        uses: actions/dependency-review-action@v4
+
+      - name: "Lint app Dockerfile (Hadolint)"
+        uses: hadolint/hadolint-action@v3.1.0
+        with:
+          dockerfile: ./build/app/Dockerfile
+          failure-threshold: warning
+      
+      - name: "Lint nginx Dockerfile (Hadolint)"
+        uses: hadolint/hadolint-action@v3.1.0
+        with:
+          dockerfile: ./build/nginx/Dockerfile
+          failure-threshold: warning
+      
+      - name: "Vulnerability Scan (Trivy)"
+        uses: ./.github/actions/trivy-repo-scan
