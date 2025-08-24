@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/steven-streller/master-laravel/compare/v1.0.1...v1.0.2) (2025-08-24)
+
+
+### Bug Fixes
+
+* update fastcgi_pass to use master-laravel-app for PHP processing ([e64d4ef](https://github.com/steven-streller/master-laravel/commit/e64d4ef9ff8d4e953dd3d63ca9037645209a7c89))
+
 ## [1.0.1](https://github.com/steven-streller/master-laravel/compare/v1.0.0...v1.0.1) (2025-08-24)
 
 
