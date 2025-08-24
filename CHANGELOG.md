@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.2](https://github.com/steven-streller/master-laravel/compare/v1.1.1...v1.1.2) (2025-08-24)
+
+
+### Bug Fixes
+
+* include composer.json in Dockerfile to ensure dependencies are correctly managed ([cfff932](https://github.com/steven-streller/master-laravel/commit/cfff93249db110c65241b4fd67f68f6c58b88250))
+
 ## [1.1.1](https://github.com/steven-streller/master-laravel/compare/v1.1.0...v1.1.1) (2025-08-24)
 
 
