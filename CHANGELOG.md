@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.1.0](https://github.com/steven-streller/master-laravel/compare/v1.0.2...v1.1.0) (2025-08-24)
+
+
+### Features
+
+* add health check endpoints for service status monitoring ([fd394e3](https://github.com/steven-streller/master-laravel/commit/fd394e32f99a0f36388c802476a1a5f60881f84d))
+
+
+### Bug Fixes
+
+* add permissions for contents in CI workflow ([4ab39cc](https://github.com/steven-streller/master-laravel/commit/4ab39cc7725b90da96e42b442b884c02af07479c))
+* remove unnecessary whitespace in /readyz route ([df0ec0b](https://github.com/steven-streller/master-laravel/commit/df0ec0ba449b3c6895097b8f330af6f89b7c9ac1))
+
 ## [1.0.2](https://github.com/steven-streller/master-laravel/compare/v1.0.1...v1.0.2) (2025-08-24)
 
 
