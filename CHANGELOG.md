@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/steven-streller/master-laravel/compare/v1.0.0...v1.0.1) (2025-08-24)
+
+
+### Miscellaneous Chores
+
+* clean up CHANGELOG by removing outdated entries and updating PHP requirement to ^8.4 ([9d9a25d](https://github.com/steven-streller/master-laravel/commit/9d9a25d066c52368aa5e3820dba65c9f8e1c10de))
+
 ## 1.0.0 (2025-08-24)
 
 
