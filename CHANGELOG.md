@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/steven-streller/master-laravel/compare/v1.1.0...v1.1.1) (2025-08-24)
+
+
+### Bug Fixes
+
+* correct session directory name in Dockerfile and update default log channel to stderr ([4565c9e](https://github.com/steven-streller/master-laravel/commit/4565c9ec74dbe7c8615741e33cbcbe9e11c00de4))
+
 ## [1.1.0](https://github.com/steven-streller/master-laravel/compare/v1.0.2...v1.1.0) (2025-08-24)
 
 
