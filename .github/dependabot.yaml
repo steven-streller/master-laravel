@@ -11,7 +11,12 @@ updates:
       interval: "daily"
       
   - package-ecosystem: "docker"
-    directory: "/"
+    directory: "/build/nginx"
+    schedule:
+      interval: "daily"
+
+  - package-ecosystem: "docker"
+    directory: "/build/app"
     schedule:
       interval: "daily"
 
