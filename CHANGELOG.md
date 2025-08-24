@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/steven-streller/master-laravel/compare/v1.2.0...v1.2.1) (2025-08-24)
+
+
+### Bug Fixes
+
+* update Dockerfile to specify correct path for www.conf and enhance NGINX timeout settings ([f8793b1](https://github.com/steven-streller/master-laravel/commit/f8793b154023e10c9fd9bf61e364d20252967fe5))
+
 ## [1.2.0](https://github.com/steven-streller/master-laravel/compare/v1.1.2...v1.2.0) (2025-08-24)
 
 
