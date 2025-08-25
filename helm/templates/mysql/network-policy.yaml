@@ -1,31 +1,31 @@
-# {{- if .Values.mysql.enabled }}
+{{- if .Values.mysql.enabled }}
 
-# apiVersion: networking.k8s.io/v1
-# kind: NetworkPolicy
-# metadata:
-#   name: {{ include "master-laravel.fullname" . }}-mysql
-#   namespace: {{ .Release.Namespace }}
-# spec:
-#   podSelector:
-#     matchLabels:
-#       app: {{ include "master-laravel.name" . }}
-#       component: mysql
-#   policyTypes:
-#     - Ingress
-#     - Egress
-#   ingress:
-#     - from:
-#         - podSelector:
-#             matchLabels:
-#               app: {{ include "master-laravel.name" . }}
-#               component: app
-#         - podSelector:
-#             matchLabels:
-#               job-name: app-migrate
-#       ports:
-#         - protocol: TCP
-#           port: 3306
-#   egress:
-#     - {}
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: {{ include "master-laravel.fullname" . }}-mysql
+  namespace: {{ .Release.Namespace }}
+spec:
+  podSelector:
+    matchLabels:
+      app: {{ include "master-laravel.name" . }}
+      component: mysql
+  policyTypes:
+    - Ingress
+    - Egress
+  ingress:
+    - from:
+        - podSelector:
+            matchLabels:
+              app: {{ include "master-laravel.name" . }}
+              component: app
+        - podSelector:
+            matchLabels:
+              job-name: app-migrate
+      ports:
+        - protocol: TCP
+          port: 3306
+  egress:
+    - {}
 
-# {{- end }}
+{{- end }}
