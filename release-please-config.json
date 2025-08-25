@@ -4,6 +4,9 @@
   "packages": {
     ".": {
       "version-file": "composer.json"
+    },
+    "helm/master-laravel": {
+      "version-file": "helm/Chart.yaml"
     }
   }
 }
