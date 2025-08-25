@@ -18,16 +18,12 @@
         {
           "type": "yaml",
           "path": "helm/values.yaml",
-          "jsonpath": "$.app.image.tag",
-          "replace-with-tag": true,
-          "include-v-in-tag": true
+          "jsonpath": "$.app.image.tag"
         },
         {
           "type": "yaml",
           "path": "helm/values.yaml",
-          "jsonpath": "$.nginx.image.tag",
-          "replace-with-tag": true,
-          "include-v-in-tag": true
+          "jsonpath": "$.nginx.image.tag"
         }
       ]
     }

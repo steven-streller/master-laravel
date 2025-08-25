@@ -29,10 +29,13 @@ jobs:
 
       - name: Build Docker image
         run: |
+          TAG_WITH_V="${{ github.event.release.tag_name }}"
+          TAG_NO_V="${TAG_WITH_V#v}"
           docker build \
             -f build/${{ matrix.image }}/Dockerfile \
             -t ghcr.io/${{ github.repository }}-${{ matrix.image }}:${{ github.sha }} \
-            -t ghcr.io/${{ github.repository }}-${{ matrix.image }}:${{ github.event.release.tag_name }} \
+            -t ghcr.io/${{ github.repository }}-${{ matrix.image }}:${TAG_WITH_V} \
+            -t ghcr.io/${{ github.repository }}-${{ matrix.image }}:${TAG_NO_V} \
             .
 
       - name: Scan image with Trivy
@@ -44,8 +47,11 @@ jobs:
 
       - name: Push Docker image
         run: |
+          TAG_WITH_V="${{ github.event.release.tag_name }}"
+          TAG_NO_V="${TAG_WITH_V#v}"
           docker push ghcr.io/${{ github.repository }}-${{ matrix.image }}:${{ github.sha }}
-          docker push ghcr.io/${{ github.repository }}-${{ matrix.image }}:${{ github.event.release.tag_name }}
+          docker push ghcr.io/${{ github.repository }}-${{ matrix.image }}:${TAG_WITH_V}
+          docker push ghcr.io/${{ github.repository }}-${{ matrix.image }}:${TAG_NO_V}
 
       - name: Generate SBOM
         uses: anchore/sbom-action@v0
