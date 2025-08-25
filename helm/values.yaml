@@ -1,0 +1,49 @@
+app:
+  replicaCount: 1
+  image:
+    repository: ghcr.io/steven-streller/master-laravel-app
+    tag: v1.2.1
+    digest: "sha256:ab7000036c2821b9900af24c681a5876323624652cc9cf6297908d496724d568"
+    pullPolicy: IfNotPresent
+  resources:
+    requests:
+      cpu: "750m"
+      memory: "1200Mi"
+    limits:
+      cpu: "2000m"
+      memory: "2Gi"
+  autoscaling:
+    minReplicas: 1
+    maxReplicas: 8
+    targetCPUUtilizationPercentage: 60
+    targetMemoryUtilizationPercentage: 70
+
+nginx:
+  replicaCount: 1
+  image:
+    repository: ghcr.io/steven-streller/master-laravel-nginx
+    tag: v1.2.1
+    digest: "sha256:89febbad1bba86183d248e092e50851bfa7a349c583c1895d58df03e569a0022"
+    pullPolicy: IfNotPresent
+  resources:
+  requests:
+    cpu: "150m"
+    memory: "128Mi"
+  limits:
+    cpu: "1000m"
+    memory: "256Mi"
+  autoscaling:
+    minReplicas: 1
+    maxReplicas: 8
+
+mysql:
+  enabled: true
+  image:
+    repository: mysql
+    tag: "9.4.0"
+  rootPassword: root
+  database: laravel
+  user: user
+  password: password
+  persistence:
+    size: 8Gi

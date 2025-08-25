@@ -1,0 +1,66 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "master-laravel.fullname" . }}-app
+  namespace: {{ .Release.Namespace }}
+  labels:
+    app: {{ include "master-laravel.name" . }}
+    component: app
+spec:
+  replicas: {{ .Values.app.replicaCount | default 1 }}
+  selector:
+    matchLabels:
+      app: {{ include "master-laravel.name" . }}
+      component: app
+  template:
+    metadata:
+      labels:
+        app: {{ include "master-laravel.name" . }}
+        component: app
+    spec:
+      containers:
+        - name: app
+          securityContext:
+            runAsUser: 82
+            runAsGroup: 82
+            runAsNonRoot: true
+            readOnlyRootFilesystem: false
+            capabilities:
+              drop:
+                - ALL
+          image: "{{ .Values.app.image.repository }}:{{ .Values.app.image.tag }}@{{ .Values.app.image.digest }}"
+          imagePullPolicy: {{ .Values.app.image.pullPolicy | default "IfNotPresent" }}
+          resources:
+            requests:
+              cpu: {{ .Values.app.resources.requests.cpu | default "100m" }}
+              memory: {{ .Values.app.resources.requests.memory | default "128Mi" }}
+            limits:
+              cpu: {{ .Values.app.resources.limits.cpu | default "500m" }}
+              memory: {{ .Values.app.resources.limits.memory | default "512Mi" }}
+          ports:
+            - containerPort: 9000
+              protocol: TCP
+              name: fastcgi
+          readinessProbe:
+            tcpSocket:
+              port: 9000
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          livenessProbe:
+            tcpSocket:
+              port: 9000
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          startupProbe:
+            tcpSocket:
+              port: 9000
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          volumeMounts:
+            - name: app-env
+              mountPath: /var/www/html/.env
+              subPath: .env
+      volumes:
+        - name: app-env
+          configMap:
+            name: {{ include "master-laravel.fullname" . }}-env

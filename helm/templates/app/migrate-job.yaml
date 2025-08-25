@@ -1,0 +1,32 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: app-migrate
+  annotations:
+    "helm.sh/hook": pre-upgrade,post-install
+    "helm.sh/hook-delete-policy": before-hook-creation,hook-succeeded
+spec:
+  backoffLimit: 5
+  template:
+    spec:
+      restartPolicy: OnFailure
+      containers:
+        - name: migrate
+          image: "{{ .Values.app.image.repository }}:{{ .Values.app.image.tag }}@{{ .Values.app.image.digest }}"
+          command: ["php", "artisan", "migrate", "--force"]
+          securityContext:
+            runAsUser: 82
+            runAsGroup: 82
+            runAsNonRoot: true
+            readOnlyRootFilesystem: false
+            capabilities:
+              drop:
+                - ALL
+          volumeMounts:
+            - name: app-env
+              mountPath: /var/www/html/.env
+              subPath: .env
+      volumes:
+        - name: app-env
+          configMap:
+            name: {{ include "master-laravel.fullname" . }}-env

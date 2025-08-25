@@ -1,0 +1,15 @@
+Thank you for installing the master-laravel Helm chart!
+
+To access your Laravel application:
+
+By default, the Nginx service is of type ClusterIP and not exposed outside the cluster.
+To access your application, use port-forwarding:
+
+  export POD_NAME=$(kubectl get pods --namespace {{ .Release.Namespace }} -l "app={{ include "master-laravel.name" . }},component=nginx" -o jsonpath="{.items[0].metadata.name}")
+  kubectl --namespace {{ .Release.Namespace }} port-forward $POD_NAME 8080:80
+  echo "Visit http://127.0.0.1:8080"
+
+Health endpoints:
+  /livez   - Liveness probe
+  /readyz  - Readiness probe
+  /healthz - Combined health check

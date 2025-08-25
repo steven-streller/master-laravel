@@ -1,0 +1,61 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "master-laravel.fullname" . }}-nginx
+  namespace: {{ .Release.Namespace }}
+  labels:
+    app: {{ include "master-laravel.name" . }}
+    component: nginx
+spec:
+  replicas: {{ .Values.nginx.replicaCount | default 1 }}
+  selector:
+    matchLabels:
+      app: {{ include "master-laravel.name" . }}
+      component: nginx
+  template:
+    metadata:
+      labels:
+        app: {{ include "master-laravel.name" . }}
+        component: nginx
+    spec:
+      containers:
+        - name: nginx
+          securityContext:
+            runAsUser: 101
+            runAsGroup: 101
+            runAsNonRoot: true
+            readOnlyRootFilesystem: false
+            capabilities:
+              drop:
+                - ALL
+          image: "{{ .Values.nginx.image.repository }}:{{ .Values.nginx.image.tag }}@{{ .Values.nginx.image.digest }}"
+          imagePullPolicy: {{ .Values.nginx.image.pullPolicy | default "IfNotPresent" }}
+          resources:
+            requests:
+              cpu: {{ .Values.app.resources.requests.cpu | default "100m" }}
+              memory: {{ .Values.app.resources.requests.memory | default "128Mi" }}
+            limits:
+              cpu: {{ .Values.app.resources.limits.cpu | default "500m" }}
+              memory: {{ .Values.app.resources.limits.memory | default "512Mi" }}
+          ports:
+            - containerPort: 80
+              protocol: TCP
+              name: http
+          readinessProbe:
+            httpGet:
+              path: /index.php/readyz
+              port: http
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /index.php/livez
+              port: http
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          startupProbe:
+            httpGet:
+              path: /index.php/healthz
+              port: http
+            initialDelaySeconds: 5
+            periodSeconds: 10
