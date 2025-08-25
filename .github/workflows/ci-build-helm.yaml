@@ -1,11 +1,8 @@
 name: "[CI] Build & Push Helm Chart"
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - 'helm/**'
+  release:
+    types: [published]
 
 jobs:
   build-and-push-helm:
