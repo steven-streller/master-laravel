@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.4.0](https://github.com/steven-streller/master-laravel/compare/v1.3.0...v1.4.0) (2025-08-25)
+
+
+### Features
+
+* add helm/master-laravel package to release-please configuration and manifest ([98ef298](https://github.com/steven-streller/master-laravel/commit/98ef2989e11bdb52b46e3211738913e8f31b56f8))
+* add master-laravel Helm chart with application, Nginx, and MySQL configurations ([1958e31](https://github.com/steven-streller/master-laravel/commit/1958e31830a7c50c711dd6d982935d9be9502294))
+
 ## [1.3.0](https://github.com/steven-streller/master-laravel/compare/v1.2.1...v1.3.0) (2025-08-25)
 
 
