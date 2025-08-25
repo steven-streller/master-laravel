@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.11](https://github.com/steven-streller/master-laravel/compare/v1.7.10...v1.7.11) (2025-08-25)
+
+
+### Bug Fixes
+
+* update runner version to ubuntu-24.04 in release workflow ([54a4bd4](https://github.com/steven-streller/master-laravel/commit/54a4bd444e8de0c9b3bbc36a410c662dec0974e6))
+
 ## [1.7.10](https://github.com/steven-streller/master-laravel/compare/v1.7.9...v1.7.10) (2025-08-25)
 
 
