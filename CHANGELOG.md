@@ -1,11 +1,22 @@
 # Changelog
 
-## [1.5.1](https://github.com/steven-streller/master-laravel/compare/v1.5.0...v1.5.1) (2025-08-25)
+## [1.6.0](https://github.com/steven-streller/master-laravel/compare/v1.5.0...v1.6.0) (2025-08-25)
+
+
+### Features
+
+* add docker-compose configuration for master-laravel services ([109265e](https://github.com/steven-streller/master-laravel/commit/109265ecabb3bbc7fe943a0a23a1758b20a7902f))
 
 
 ### Bug Fixes
 
 * remove helm/master-laravel version from release-please manifest ([ca6471e](https://github.com/steven-streller/master-laravel/commit/ca6471e10e78ecfdda1f70bf55b00f6ef981e244))
+
+
+### Miscellaneous Chores
+
+* **main:** release 1.5.1 ([9dcfd4c](https://github.com/steven-streller/master-laravel/commit/9dcfd4cada2557f36e503692477d9e53bea12de0))
+* **main:** release 1.5.1 ([795327d](https://github.com/steven-streller/master-laravel/commit/795327de7c0cbba741801ba5ebe80ff4e6b52d8d))
 
 ## [1.5.0](https://github.com/steven-streller/master-laravel/compare/v1.4.0...v1.5.0) (2025-08-25)
 
