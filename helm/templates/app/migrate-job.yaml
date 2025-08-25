@@ -12,7 +12,7 @@ spec:
       restartPolicy: OnFailure
       containers:
         - name: migrate
-          image: "{{ .Values.app.image.repository }}:{{ .Values.app.image.tag }}@{{ .Values.app.image.digest }}"
+          image: "{{ .Values.app.image.repository }}:{{ .Values.app.image.tag }}
           command: ["php", "artisan", "migrate", "--force"]
           securityContext:
             runAsUser: 82
