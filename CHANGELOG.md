@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.7.3](https://github.com/steven-streller/master-laravel/compare/v1.7.2...v1.7.3) (2025-08-25)
+
+
+### Bug Fixes
+
+* add missing jsonpath entries for app and nginx image tags in release-please config ([7e36e20](https://github.com/steven-streller/master-laravel/commit/7e36e2092b311d683c9dfe57585dcc1b46ca2916))
+* remove image digest from app and nginx deployment configurations ([08dcf4c](https://github.com/steven-streller/master-laravel/commit/08dcf4c34e924e1c49f91ab8a0c9fe7c90b1acaf))
+
 ## [1.7.2](https://github.com/steven-streller/master-laravel/compare/v1.7.1...v1.7.2) (2025-08-25)
 
 
