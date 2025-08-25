@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.7.14](https://github.com/steven-streller/master-laravel/compare/v1.7.13...v1.7.14) (2025-08-25)
+
+
+### Miscellaneous Chores
+
+* **deps-dev:** bump phpunit/phpunit from 11.5.34 to 12.3.6 ([d01f989](https://github.com/steven-streller/master-laravel/commit/d01f9898e1dbb7f62949d01b8a53b1ecfd887b26))
+* **deps-dev:** bump phpunit/phpunit from 11.5.34 to 12.3.6 ([d3fb5cd](https://github.com/steven-streller/master-laravel/commit/d3fb5cdf089c1b681a4cdeb9ac213781852b8e95))
+* **deps:** bump actions/checkout from 4 to 5 ([451b435](https://github.com/steven-streller/master-laravel/commit/451b4354acdfc7589b7322f6a78bec46c3a9eb1c))
+* **deps:** bump actions/checkout from 4 to 5 ([6e272bd](https://github.com/steven-streller/master-laravel/commit/6e272bd892b70bc7f13c7b255455d983e83dd0f3))
+
 ## [1.7.13](https://github.com/steven-streller/master-laravel/compare/v1.7.12...v1.7.13) (2025-08-25)
 
 
