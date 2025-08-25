@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.1](https://github.com/steven-streller/master-laravel/compare/v1.7.0...v1.7.1) (2025-08-25)
+
+
+### Miscellaneous Chores
+
+* trigger release ([efeb7e0](https://github.com/steven-streller/master-laravel/commit/efeb7e063b5e4a2e43ff55bdf540e055788bb4fe))
+
 ## [1.7.0](https://github.com/steven-streller/master-laravel/compare/v1.6.0...v1.7.0) (2025-08-25)
 
 
