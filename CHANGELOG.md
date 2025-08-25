@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.2](https://github.com/steven-streller/master-laravel/compare/v1.7.1...v1.7.2) (2025-08-25)
+
+
+### Bug Fixes
+
+* add missing entry for version extraction in release-please config ([0d350d1](https://github.com/steven-streller/master-laravel/commit/0d350d1c50fc59e281897001620c224813c5a0e6))
+
 ## [1.7.1](https://github.com/steven-streller/master-laravel/compare/v1.7.0...v1.7.1) (2025-08-25)
 
 
