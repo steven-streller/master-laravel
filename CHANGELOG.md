@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.0](https://github.com/steven-streller/master-laravel/compare/v1.6.0...v1.7.0) (2025-08-25)
+
+
+### Features
+
+* add CI workflow for building and pushing Helm charts ([2ccf068](https://github.com/steven-streller/master-laravel/commit/2ccf068d14e166a67a8f720b2f46b9748f8b7d6c))
+
 ## [1.6.0](https://github.com/steven-streller/master-laravel/compare/v1.5.0...v1.6.0) (2025-08-25)
 
 
