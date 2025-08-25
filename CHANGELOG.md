@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.5.0](https://github.com/steven-streller/master-laravel/compare/v1.4.0...v1.5.0) (2025-08-25)
+
+
+### Features
+
+* enhance release-please configuration to include extra-files for helm package ([0caba6a](https://github.com/steven-streller/master-laravel/commit/0caba6ace74649e5efcd851148f32d87746a65fa))
+* update release-please configuration for helm/master-laravel package ([ebaf8d1](https://github.com/steven-streller/master-laravel/commit/ebaf8d1e992f4cd0ad9e2b653d78c105bbaaafbd))
+
+
+### Bug Fixes
+
+* update release-please configuration to correct helm package path ([16aa2f7](https://github.com/steven-streller/master-laravel/commit/16aa2f758cee16d5c7f8f1c8d5179a416aa8a82f))
+
 ## [1.4.0](https://github.com/steven-streller/master-laravel/compare/v1.3.0...v1.4.0) (2025-08-25)
 
 
