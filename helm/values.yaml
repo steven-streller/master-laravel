@@ -3,7 +3,6 @@ app:
   image:
     repository: ghcr.io/steven-streller/master-laravel-app
     tag: v1.2.1
-    digest: "sha256:ab7000036c2821b9900af24c681a5876323624652cc9cf6297908d496724d568"
     pullPolicy: IfNotPresent
   resources:
     requests:
@@ -23,7 +22,6 @@ nginx:
   image:
     repository: ghcr.io/steven-streller/master-laravel-nginx
     tag: v1.2.1
-    digest: "sha256:89febbad1bba86183d248e092e50851bfa7a349c583c1895d58df03e569a0022"
     pullPolicy: IfNotPresent
   resources:
   requests:

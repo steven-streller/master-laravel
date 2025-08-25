@@ -28,7 +28,7 @@ spec:
             capabilities:
               drop:
                 - ALL
-          image: "{{ .Values.app.image.repository }}:{{ .Values.app.image.tag }}@{{ .Values.app.image.digest }}"
+          image: "{{ .Values.app.image.repository }}:{{ .Values.app.image.tag }}"
           imagePullPolicy: {{ .Values.app.image.pullPolicy | default "IfNotPresent" }}
           resources:
             requests:
