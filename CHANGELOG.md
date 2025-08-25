@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.1](https://github.com/steven-streller/master-laravel/compare/v1.5.0...v1.5.1) (2025-08-25)
+
+
+### Bug Fixes
+
+* remove helm/master-laravel version from release-please manifest ([ca6471e](https://github.com/steven-streller/master-laravel/commit/ca6471e10e78ecfdda1f70bf55b00f6ef981e244))
+
 ## [1.5.0](https://github.com/steven-streller/master-laravel/compare/v1.4.0...v1.5.0) (2025-08-25)
 
 
