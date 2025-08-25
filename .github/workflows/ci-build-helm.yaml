@@ -30,11 +30,8 @@ jobs:
       - name: Package Helm chart
         run: helm package helm --destination .
 
-      - name: Install yq
-        run: sudo apt-get update && sudo apt-get install -y yq
-
       - name: Push Helm chart to GHCR
         run: |
-          CHART_VERSION=$(yq '.version' helm/Chart.yaml)
-          CHART_NAME=$(yq '.name' helm/Chart.yaml)
+          CHART_VERSION=$(grep '^version:' helm/Chart.yaml | awk '{print $2}')
+          CHART_NAME=$(grep '^name:' helm/Chart.yaml | awk '{print $2}')
           helm push ${CHART_NAME}-${CHART_VERSION}.tgz oci://ghcr.io/${{ github.repository_owner }}/charts
