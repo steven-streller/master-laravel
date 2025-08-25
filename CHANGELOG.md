@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.4](https://github.com/steven-streller/master-laravel/compare/v1.7.3...v1.7.4) (2025-08-25)
+
+
+### Bug Fixes
+
+* add 'replace-with-tag' option for app and nginx image tags in release-please config ([2d7ae59](https://github.com/steven-streller/master-laravel/commit/2d7ae5995aff822b017f5df090bf53c162641287))
+
 ## [1.7.3](https://github.com/steven-streller/master-laravel/compare/v1.7.2...v1.7.3) (2025-08-25)
 
 
