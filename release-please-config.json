@@ -3,12 +3,14 @@
   "packages": {
     ".": {
       "release-type": "php",
-      "version-file": "composer.json"
-    },
-    "helm": {
-      "release-type": "helm",
-      "version-file": "Chart.yaml",
-      "include-component-in-tag": true
+      "version-file": "composer.json",
+      "extra-files": [
+        {
+          "type": "yaml",
+          "path": "helm/Chart.yaml",
+          "jsonpath": "$.appVersion"
+        }
+      ]
     }
   }
 }
