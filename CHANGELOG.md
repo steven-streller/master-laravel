@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.7.5](https://github.com/steven-streller/master-laravel/compare/v1.7.4...v1.7.5) (2025-08-25)
+
+
+### Bug Fixes
+
+* correct image tag format in values.yaml to include 'v' prefix ([26ef351](https://github.com/steven-streller/master-laravel/commit/26ef3511e8cfbe61b2ab9c25bb5556dc62af2de7))
+* update CI workflow to trigger on release and adjust image tag options in release-please config ([c18caed](https://github.com/steven-streller/master-laravel/commit/c18caed4744c7cc099da3cf56126fce62c892ba9))
+
 ## [1.7.4](https://github.com/steven-streller/master-laravel/compare/v1.7.3...v1.7.4) (2025-08-25)
 
 
