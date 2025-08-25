@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.15](https://github.com/steven-streller/master-laravel/compare/v1.7.14...v1.7.15) (2025-08-25)
+
+
+### Bug Fixes
+
+* update dependencies in composer files for consistency and stability ([7f46676](https://github.com/steven-streller/master-laravel/commit/7f46676b1588e98023558db145a3f340dd2ecf0c))
+
 ## [1.7.14](https://github.com/steven-streller/master-laravel/compare/v1.7.13...v1.7.14) (2025-08-25)
 
 
