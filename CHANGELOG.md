@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.9](https://github.com/steven-streller/master-laravel/compare/v1.7.8...v1.7.9) (2025-08-25)
+
+
+### Bug Fixes
+
+* remove image digest from migrate job configuration ([73c2756](https://github.com/steven-streller/master-laravel/commit/73c275651c149d13f969ad6cb96dc964cc4d065d))
+
 ## [1.7.8](https://github.com/steven-streller/master-laravel/compare/v1.7.7...v1.7.8) (2025-08-25)
 
 
