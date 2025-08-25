@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.13](https://github.com/steven-streller/master-laravel/compare/v1.7.12...v1.7.13) (2025-08-25)
+
+
+### Bug Fixes
+
+* consolidate COPY commands in Dockerfile for improved clarity ([f35735a](https://github.com/steven-streller/master-laravel/commit/f35735acccb2de420924606ec939df1927317030))
+
 ## [1.7.12](https://github.com/steven-streller/master-laravel/compare/v1.7.11...v1.7.12) (2025-08-25)
 
 
