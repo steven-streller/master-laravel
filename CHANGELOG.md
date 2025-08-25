@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.3.0](https://github.com/steven-streller/master-laravel/compare/v1.2.1...v1.3.0) (2025-08-25)
+
+
+### Features
+
+* add release-please configuration for versioning management ([d1a87e4](https://github.com/steven-streller/master-laravel/commit/d1a87e410e4973bf5833c7806ad49afbf4427167))
+* add release-please manifest file for versioning management ([9ba066e](https://github.com/steven-streller/master-laravel/commit/9ba066e9fe239d8d209273df31a4afc98b8f98b4))
+* remove obsolete release-please configuration and update manifest version ([2e3c5a2](https://github.com/steven-streller/master-laravel/commit/2e3c5a240bdfc4d6392da0a9548e7569233aae67))
+* simplify release-please configuration by removing unnecessary fields ([8bf8c65](https://github.com/steven-streller/master-laravel/commit/8bf8c65cf50c3192335a511939204424c56949bc))
+* update release-please configuration and add missing config file ([91b660b](https://github.com/steven-streller/master-laravel/commit/91b660b63bf7e40b2dddc9580be4f747c47b1854))
+
+
+### Bug Fixes
+
+* update config-file path in release-please workflow ([3fb3a01](https://github.com/steven-streller/master-laravel/commit/3fb3a010b5c110feb2e7fac3d50b44ba1185606b))
+* update version in release-please manifest to 1.2.1 ([435078b](https://github.com/steven-streller/master-laravel/commit/435078b8cab54e19315afb75c4312c8dad0f71ef))
+
 ## [1.2.1](https://github.com/steven-streller/master-laravel/compare/v1.2.0...v1.2.1) (2025-08-24)
 
 
