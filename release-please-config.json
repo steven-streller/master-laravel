@@ -5,7 +5,7 @@
       "release-type": "php",
       "version-file": "composer.json"
     },
-    "helm/master-laravel": {
+    "helm": {
       "release-type": "helm",
       "version-file": "Chart.yaml",
       "include-component-in-tag": true
