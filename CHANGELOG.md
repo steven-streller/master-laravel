@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.12](https://github.com/steven-streller/master-laravel/compare/v1.7.11...v1.7.12) (2025-08-25)
+
+
+### Bug Fixes
+
+* streamline Dockerfile by adjusting WORKDIR and simplifying asset copy commands ([2bb6ae6](https://github.com/steven-streller/master-laravel/commit/2bb6ae656d520a543f554e82e079a7e43fe9ab0f))
+
 ## [1.7.11](https://github.com/steven-streller/master-laravel/compare/v1.7.10...v1.7.11) (2025-08-25)
 
 
