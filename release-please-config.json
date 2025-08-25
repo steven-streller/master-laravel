@@ -1,12 +1,14 @@
 {
   "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
-  "release-type": "php",
   "packages": {
     ".": {
+      "release-type": "php",
       "version-file": "composer.json"
     },
     "helm/master-laravel": {
-      "version-file": "helm/Chart.yaml"
+      "release-type": "helm",
+      "version-file": "Chart.yaml",
+      "include-component-in-tag": true
     }
   }
 }
