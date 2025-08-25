@@ -1,0 +1,14 @@
+{
+  "packages": {
+    "helm/master-laravel": {
+      "component": "master-laravel",
+      "version-file": "helm/Chart.yaml",
+      "versioning": "helm"
+    },
+    ".": {
+      "component": "master-laravel",
+      "version-file": "composer.json",
+      "versioning": "php"
+    }
+  }
+}
