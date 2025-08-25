@@ -1,0 +1,35 @@
+services:
+  master-laravel-app:
+    # build:
+    #   context: .
+    #   dockerfile: build/app/Dockerfile
+    image: ghcr.io/steven-streller/master-laravel-app:v1.2.1
+    restart: unless-stopped
+    volumes:
+      - .env:/var/www/html/.env
+    ports:
+      - "9000:9000"
+    depends_on:
+      - mysql
+  master-laravel-nginx:
+    # build:
+    #   context: .
+    #   dockerfile: build/nginx/Dockerfile
+    image: ghcr.io/steven-streller/master-laravel-nginx:v1.2.1
+    ports:
+      - "80:80"
+    depends_on:
+      - master-laravel-app
+  mysql:
+    image: mysql:9.4.0
+    container_name: mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: laravel
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+    volumes:
+      - ./mysql:/var/lib/mysql
+    expose:
+      - 3306

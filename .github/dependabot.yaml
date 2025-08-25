@@ -29,3 +29,8 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+
+  - package-ecosystem: "helm"
+    directory: "/helm"
+    schedule:
+      interval: "daily"
