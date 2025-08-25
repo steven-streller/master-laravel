@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.7.8](https://github.com/steven-streller/master-laravel/compare/v1.7.7...v1.7.8) (2025-08-25)
+
+
+### Bug Fixes
+
+* update Docker image tagging to include version without 'v' prefix ([8e79df9](https://github.com/steven-streller/master-laravel/commit/8e79df925ed32e40e796ece36765a0e61f42c1ce))
+* update image tags to include 'v' prefix in values.yaml ([2b34364](https://github.com/steven-streller/master-laravel/commit/2b34364b46f926dd33310d05c745a86f8e78cdcf))
+
 ## [1.7.7](https://github.com/steven-streller/master-laravel/compare/v1.7.6...v1.7.7) (2025-08-25)
 
 
