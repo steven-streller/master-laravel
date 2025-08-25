@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.10](https://github.com/steven-streller/master-laravel/compare/v1.7.9...v1.7.10) (2025-08-25)
+
+
+### Bug Fixes
+
+* correct image configuration in migrate job ([a038860](https://github.com/steven-streller/master-laravel/commit/a03886089e2369363ef87c0b2b428d02b4a209ae))
+
 ## [1.7.9](https://github.com/steven-streller/master-laravel/compare/v1.7.8...v1.7.9) (2025-08-25)
 
 
