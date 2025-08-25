@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.6](https://github.com/steven-streller/master-laravel/compare/v1.7.5...v1.7.6) (2025-08-25)
+
+
+### Bug Fixes
+
+* add 'v' prefix to image tag in values.yaml for app and nginx ([319612e](https://github.com/steven-streller/master-laravel/commit/319612e6d79fddc8ecea8740f126a181ee8dfc9c))
+
 ## [1.7.5](https://github.com/steven-streller/master-laravel/compare/v1.7.4...v1.7.5) (2025-08-25)
 
 
