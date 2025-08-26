@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.8.0](https://github.com/steven-streller/master-laravel/compare/v1.7.15...v1.8.0) (2025-08-25)
+
+
+### Features
+
+* add nwidart/laravel-modules and wikimedia/composer-merge-plugin dependencies ([b7462a3](https://github.com/steven-streller/master-laravel/commit/b7462a39d965d7ece1bf42fe33299343f9bf08af))
+* update docker-compose configuration and phpunit settings for improved testing environment ([59b2e77](https://github.com/steven-streller/master-laravel/commit/59b2e77c93f85d228083d0027e73b030481bf1ab))
+
+## [1.7.15](https://github.com/steven-streller/master-laravel/compare/v1.7.14...v1.7.15) (2025-08-25)
+
+
+### Bug Fixes
+
+* update dependencies in composer files for consistency and stability ([7f46676](https://github.com/steven-streller/master-laravel/commit/7f46676b1588e98023558db145a3f340dd2ecf0c))
+
 ## [1.7.14](https://github.com/steven-streller/master-laravel/compare/v1.7.13...v1.7.14) (2025-08-25)
 
 
