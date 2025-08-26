@@ -40,6 +40,7 @@ nginx:
     tlsSecretName: master-laravel.streller.net
     annotations:
       cert-manager.io/cluster-issuer: cluster-issuer
+      traefik.ingress.kubernetes.io/forwarded-headers-strategy: "Replace"
 mysql:
   enabled: true
   image:

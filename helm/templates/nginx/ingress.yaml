@@ -7,11 +7,11 @@ metadata:
     app: {{ include "master-laravel.name" . }}
     component: nginx
   annotations:
-    kubernetes.io/ingress.class: {{ .Values.nginx.ingress.class | default "nginx" | quote }}
     {{- with .Values.nginx.ingress.annotations }}
     {{- toYaml . | nindent 4 }}
     {{- end }}
 spec:
+  ingressClassName: {{ .Values.nginx.ingress.class | default "nginx" | quote }} 
   rules:
     - host: {{ .Values.nginx.ingress.host | quote }}
       http:
