@@ -2,7 +2,7 @@ app:
   replicaCount: 1
   image:
     repository: ghcr.io/steven-streller/master-laravel-app
-    tag: 1.9.0
+    tag: 1.9.1
     pullPolicy: IfNotPresent
   resources:
     requests:
@@ -20,7 +20,7 @@ nginx:
   replicaCount: 1
   image:
     repository: ghcr.io/steven-streller/master-laravel-nginx
-    tag: 1.9.0
+    tag: 1.9.1
     pullPolicy: IfNotPresent
   resources: null
   requests:
@@ -40,7 +40,7 @@ nginx:
     tlsSecretName: master-laravel.streller.net
     annotations:
       cert-manager.io/cluster-issuer: cluster-issuer
-      traefik.ingress.kubernetes.io/forwarded-headers-strategy: "Replace"
+      traefik.ingress.kubernetes.io/forwarded-headers-strategy: Replace
 mysql:
   enabled: true
   image:
