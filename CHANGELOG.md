@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.9.4](https://github.com/steven-streller/master-laravel/compare/v1.9.3...v1.9.4) (2025-08-26)
+
+
+### Bug Fixes
+
+* **favicon:** update favicon.ico to improve branding ([c719a57](https://github.com/steven-streller/master-laravel/commit/c719a57df20d4cb06eb8f3d6487093bd3aa70633))
+* **nginx:** add missing location block for robots.txt ([636886b](https://github.com/steven-streller/master-laravel/commit/636886b10265ed87c0c38d854741ad9bf5896348))
+
 ## [1.9.3](https://github.com/steven-streller/master-laravel/compare/v1.9.2...v1.9.3) (2025-08-26)
 
 
