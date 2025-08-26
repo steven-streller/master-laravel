@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.0](https://github.com/steven-streller/master-laravel/compare/v1.8.1...v1.9.0) (2025-08-26)
+
+
+### Features
+
+* **nginx:** add ingress configuration for nginx service ([9655c3f](https://github.com/steven-streller/master-laravel/commit/9655c3f369b56e6e75f91ad35515252582619c3c))
+
 ## [1.8.1](https://github.com/steven-streller/master-laravel/compare/v1.8.0...v1.8.1) (2025-08-26)
 
 
