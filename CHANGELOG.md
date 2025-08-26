@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.1](https://github.com/steven-streller/master-laravel/compare/v1.9.0...v1.9.1) (2025-08-26)
+
+
+### Bug Fixes
+
+* **nginx:** update root directory to point to the correct public path ([caf1989](https://github.com/steven-streller/master-laravel/commit/caf19896eb766d4de4e6548aa96167fd63aabc71))
+
 ## [1.9.0](https://github.com/steven-streller/master-laravel/compare/v1.8.1...v1.9.0) (2025-08-26)
 
 
