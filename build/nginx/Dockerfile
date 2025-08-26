@@ -14,7 +14,7 @@ RUN npm run build
 
 FROM nginx:alpine3.22@sha256:42a516af16b852e33b7682d5ef8acbd5d13fe08fecadc7ed98605ba5e3b26ab8
 
-WORKDIR /usr/share/nginx/html
+WORKDIR /var/www/html/public
 
 RUN rm -f index.html
 
