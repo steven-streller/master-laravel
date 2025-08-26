@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.2](https://github.com/steven-streller/master-laravel/compare/v1.9.1...v1.9.2) (2025-08-26)
+
+
+### Miscellaneous Chores
+
+* **main:** release 1.9.1 ([c968ee5](https://github.com/steven-streller/master-laravel/commit/c968ee5369e69010eba7904ff8d70a4967dbd75c))
+
 ## [1.9.1](https://github.com/steven-streller/master-laravel/compare/v1.9.0...v1.9.1) (2025-08-26)
 
 
