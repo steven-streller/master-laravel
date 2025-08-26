@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.8.1](https://github.com/steven-streller/master-laravel/compare/v1.8.0...v1.8.1) (2025-08-26)
+
+
+### Miscellaneous Chores
+
+* **deps-dev:** bump concurrently from 9.2.0 to 9.2.1 ([ea76d9a](https://github.com/steven-streller/master-laravel/commit/ea76d9a0c694f0636f818d3ce17344eaf71ce04c))
+* **deps-dev:** bump concurrently from 9.2.0 to 9.2.1 ([35b1ee1](https://github.com/steven-streller/master-laravel/commit/35b1ee121f78e139fbe4fb2a73efbbe2abcc8017))
+* **deps-dev:** bump larastan/larastan from 3.6.0 to 3.6.1 ([efbf8e0](https://github.com/steven-streller/master-laravel/commit/efbf8e0a574e60b81c0134c6276e73a9c361d8a1))
+* **deps-dev:** bump larastan/larastan from 3.6.0 to 3.6.1 ([0b393ce](https://github.com/steven-streller/master-laravel/commit/0b393ce17bd21eec73c6c325a7dbb23429c2a034))
+
 ## [1.8.0](https://github.com/steven-streller/master-laravel/compare/v1.7.15...v1.8.0) (2025-08-25)
 
 
