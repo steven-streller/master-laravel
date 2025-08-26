@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.5](https://github.com/steven-streller/master-laravel/compare/v1.9.4...v1.9.5) (2025-08-26)
+
+
+### Bug Fixes
+
+* **docker:** update nginx WORKDIR to correct public directory ([388694e](https://github.com/steven-streller/master-laravel/commit/388694ea1cca88345e2a527cdd896fdbedbd49a7))
+
 ## [1.9.4](https://github.com/steven-streller/master-laravel/compare/v1.9.3...v1.9.4) (2025-08-26)
 
 
