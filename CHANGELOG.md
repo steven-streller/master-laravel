@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.9.3](https://github.com/steven-streller/master-laravel/compare/v1.9.2...v1.9.3) (2025-08-26)
+
+
+### Bug Fixes
+
+* **app:** remove unnecessary import of Request in app.php ([eaa97ff](https://github.com/steven-streller/master-laravel/commit/eaa97ff009d0a4e716326670dd33da7611343af3))
+* **helm:** remove forwarded headers strategy annotation from nginx ingress ([eaa97ff](https://github.com/steven-streller/master-laravel/commit/eaa97ff009d0a4e716326670dd33da7611343af3))
+
 ## [1.9.2](https://github.com/steven-streller/master-laravel/compare/v1.9.1...v1.9.2) (2025-08-26)
 
 
