@@ -32,6 +32,14 @@ nginx:
   autoscaling:
     minReplicas: 1
     maxReplicas: 8
+  ingress:
+    enabled: true
+    host: master-laravel.streller.net
+    class: traefik
+    tls: true
+    tlsSecretName: "master-laravel.streller.net"
+    annotations:
+      cert-manager.io/cluster-issuer: cluster-issuer
 mysql:
   enabled: true
   image:

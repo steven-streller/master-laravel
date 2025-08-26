@@ -1,0 +1,31 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: {{ include "master-laravel.fullname" . }}-nginx
+  namespace: {{ .Release.Namespace }}
+  labels:
+    app: {{ include "master-laravel.name" . }}
+    component: nginx
+  annotations:
+    kubernetes.io/ingress.class: {{ .Values.nginx.ingress.class | default "nginx" | quote }}
+    {{- with .Values.nginx.ingress.annotations }}
+    {{- toYaml . | nindent 4 }}
+    {{- end }}
+spec:
+  rules:
+    - host: {{ .Values.nginx.ingress.host | quote }}
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: {{ include "master-laravel.fullname" . }}-nginx
+                port:
+                  number: 80
+  {{- if .Values.nginx.ingress.tls }}
+  tls:
+    - hosts:
+        - {{ .Values.nginx.ingress.host | quote }}
+      secretName: {{ .Values.nginx.ingress.tlsSecretName | default (printf "%s-tls" (include "master-laravel.fullname" .)) }}
+  {{- end }}
