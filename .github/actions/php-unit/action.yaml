@@ -20,8 +20,14 @@ runs:
       run: php artisan key:generate
       shell: bash
 
+    - name: Install frontend dependencies and build assets
+      run: |
+        npm ci
+        npm run build
+      shell: bash
+
     - name: Execute tests with coverage
-      run: ./vendor/bin/phpunit --coverage-text --colors=always --no-progress
+      run: ./vendor/bin/phpunit --coverage-text --colors=always --no-progress > result.log
       shell: bash
 
     - name: Check coverage threshold
