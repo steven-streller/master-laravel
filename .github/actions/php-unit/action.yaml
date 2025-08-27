@@ -28,6 +28,7 @@ runs:
       if: inputs.coverage-gate == 'true'
       run: |
         COVERAGE=$(grep -Po 'Lines:\s+\K[0-9\.]+' result.log | head -1)
+        cat result.log
         echo "Detected coverage: $COVERAGE%"
         THRESHOLD=${{ inputs.coverage-threshold }}
         if (( $(echo "$COVERAGE < $THRESHOLD" | bc -l) )); then
