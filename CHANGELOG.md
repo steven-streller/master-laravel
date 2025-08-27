@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.9.6](https://github.com/steven-streller/master-laravel/compare/v1.9.5...v1.9.6) (2025-08-27)
+
+
+### Miscellaneous Chores
+
+* **deps:** bump laravel/framework from 12.25.0 to 12.26.0 ([5f34cb5](https://github.com/steven-streller/master-laravel/commit/5f34cb58a5ef9e383f36bf9bbcf2e343ae1eb44a))
+* **deps:** bump laravel/framework from 12.25.0 to 12.26.0 ([96baa53](https://github.com/steven-streller/master-laravel/commit/96baa5335ba2c74acc234a118cc27d188d56076e))
+
 ## [1.9.5](https://github.com/steven-streller/master-laravel/compare/v1.9.4...v1.9.5) (2025-08-26)
 
 
