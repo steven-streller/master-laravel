@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.8](https://github.com/steven-streller/master-laravel/compare/v1.9.7...v1.9.8) (2025-08-27)
+
+
+### Miscellaneous Chores
+
+* trigger release-please ([24cf38a](https://github.com/steven-streller/master-laravel/commit/24cf38a2d06bc8f2f27684455ddeed85fbe34fbc))
+
 ## [1.9.7](https://github.com/steven-streller/master-laravel/compare/v1.9.6...v1.9.7) (2025-08-27)
 
 
