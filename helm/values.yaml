@@ -22,13 +22,13 @@ nginx:
     repository: ghcr.io/steven-streller/master-laravel-nginx
     tag: 1.10.0
     pullPolicy: IfNotPresent
-  resources: null
-  requests:
-    cpu: 150m
-    memory: 128Mi
-  limits:
-    cpu: 1000m
-    memory: 256Mi
+  resources:
+    requests:
+      cpu: 150m
+      memory: 128Mi
+    limits:
+      cpu: 1000m
+      memory: 256Mi
   autoscaling:
     minReplicas: 1
     maxReplicas: 8
@@ -56,5 +56,13 @@ redis:
   image:
     repository: redis
     tag: 8.2.1-alpine3.22
+    pullPolicy: IfNotPresent
+  resources:
+    requests:
+      cpu: 250m
+      memory: 256Mi
+    limits:
+      cpu: 1000m
+      memory: 512Mi
   persistence:
     size: 8Gi

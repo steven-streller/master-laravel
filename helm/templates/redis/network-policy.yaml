@@ -18,7 +18,7 @@ spec:
         - podSelector:
             matchLabels:
               app: {{ include "master-laravel.name" . }}
-              component: app
+              component: redis
       ports:
         - protocol: TCP
           port: 6379

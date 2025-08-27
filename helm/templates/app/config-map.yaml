@@ -32,3 +32,8 @@ data:
     QUEUE_CONNECTION=database
 
     CACHE_STORE=database
+
+    REDIS_CLIENT=phpredis
+    REDIS_HOST=master-laravel-redis
+    REDIS_PASSWORD=null
+    REDIS_PORT=6379

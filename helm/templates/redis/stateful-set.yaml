@@ -29,9 +29,6 @@ spec:
         - name: redis
           image: {{ .Values.redis.image.repository }}:{{ .Values.redis.image.tag }}
           imagePullPolicy: {{ .Values.redis.image.pullPolicy | default "IfNotPresent" }}
-          ports:
-            - containerPort: 6379
-              name: redis
           securityContext:
             runAsNonRoot: true
             allowPrivilegeEscalation: false
@@ -39,6 +36,32 @@ spec:
             capabilities:
               drop:
                 - ALL
+          resources:
+            requests:
+              cpu: {{ .Values.redis.resources.requests.cpu | default "250m" }}
+              memory: {{ .Values.redis.resources.requests.memory | default "256Mi" }}
+            limits:
+              cpu: {{ .Values.redis.resources.limits.cpu | default "1000m" }}
+              memory: {{ .Values.redis.resources.limits.memory | default "512Mi" }}
+          ports:
+            - containerPort: 6379
+              name: redis
+          readinessProbe:
+            tcpSocket:
+              port: redis
+            periodSeconds: 5
+            timeoutSeconds: 2
+          livenessProbe:
+            tcpSocket:
+              port: redis
+            initialDelaySeconds: 10
+            periodSeconds: 10
+            timeoutSeconds: 2
+          startupProbe:
+            tcpSocket:
+              port: redis
+            failureThreshold: 30
+            periodSeconds: 10
           volumeMounts:
             - name: data
               mountPath: /data
