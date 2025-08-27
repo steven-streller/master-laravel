@@ -1,0 +1,24 @@
+@use "../base/variables";
+
+.bg-grey {
+  background-color: variables.$grey;
+}
+
+.bg-dlrg {
+  background-color: variables.$bg-dlrg;
+}
+
+.text-dlrg {
+  color: variables.$text-dlrg;
+}
+
+#navbar_grey a {
+    color: #575756;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+#dlrg-navbar-toggler {
+    color: rgba(255, 255, 255, 0.7);
+    border-color: rgba(255, 255, 255, 0.7);
+}

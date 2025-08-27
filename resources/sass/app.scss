@@ -1,0 +1,30 @@
+// Variables
+@use 'base/variables';
+
+// Bootstrap
+@use 'bootstrap/scss/bootstrap' with (
+  $font-family-sans-serif: variables.$font-family-sans-serif,
+  $font-size-base: variables.$font-size-base,
+  $line-height-base: variables.$line-height-base,
+  $body-bg: variables.$body-bg
+);
+
+// Layout & Components
+@use 'base/layout';
+@use 'components/navigation';
+
+// Font Awesome
+
+// customize variables
+@use '@fortawesome/fontawesome-free/scss/variables' as fa-variables with (
+    // customizing $font-path - make sure it points to where your webfonts are stored in your project
+  $font-path: '@fortawesome/fontawesome-free/webfonts',
+);
+// load Font Awesome core
+@use '@fortawesome/fontawesome-free/scss/fontawesome';
+
+// load and make available Font Awesome helpers (mixins, functions, and variables)
+@use '@fortawesome/fontawesome-free/scss/fa' as fa;
+
+// load individual Font Awesome styles - add only the ones you plan to use in your project. Here is an example of a project using Classic Solid, Brands, Duotone Solid, and Sharp Duotone Solid icons...
+@use '@fortawesome/fontawesome-free/scss/solid' as fa-solid;

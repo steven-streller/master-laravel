@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 
 Route::get('/livez', fn () => response()->json(['status' => 'live']));
 
@@ -22,7 +22,6 @@ Route::get('/healthz', function () {
     $checks = [];
     $status = 200;
 
-    // DB-Check
     try {
         \DB::connection()->getPdo();
         $checks['db'] = 'ok';
@@ -30,8 +29,6 @@ Route::get('/healthz', function () {
         $checks['db'] = 'fail';
         $status = 503;
     }
-
-    // Hier könntest du weitere Checks ergänzen (Cache, Queue, etc.)
 
     return response()->json(['status' => $status === 200 ? 'healthy' : 'unhealthy', 'checks' => $checks], $status);
 });
