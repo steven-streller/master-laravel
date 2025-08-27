@@ -18,8 +18,20 @@ spec:
         app: {{ include "master-laravel.name" . }}
         component: mysql
     spec:
+      securityContext:
+        runAsUser: 999
+        runAsGroup: 999
+        fsGroup: 999
+        
       containers:
         - name: mysql
+          securityContext:
+            runAsNonRoot: true
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            capabilities:
+              drop:
+                - ALL
           image: "{{ .Values.mysql.image.repository }}:{{ .Values.mysql.image.tag }}"
           env:
             - name: MYSQL_ROOT_PASSWORD
@@ -39,6 +51,15 @@ spec:
           volumeMounts:
             - name: data
               mountPath: /var/lib/mysql
+            - name: tmp
+              mountPath: /tmp
+            - name: run
+              mountPath: /var/run/mysqld
+      volumes:
+        - name: tmp
+          emptyDir: {}
+        - name: run
+          emptyDir: {}  
   volumeClaimTemplates:
     - metadata:
         name: data

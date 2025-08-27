@@ -24,7 +24,8 @@ spec:
             runAsUser: 82
             runAsGroup: 82
             runAsNonRoot: true
-            readOnlyRootFilesystem: false
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
             capabilities:
               drop:
                 - ALL
@@ -60,7 +61,31 @@ spec:
             - name: app-env
               mountPath: /var/www/html/.env
               subPath: .env
+            - name: bootstrap-cache
+              mountPath: /var/www/html/bootstrap/cache
+            - name: storage-framework
+              mountPath: /var/www/html/storage/framework
+            - name: storage-framework-views
+              mountPath: /var/www/html/storage/framework/views
+            - name: storage-framework-cache
+              mountPath: /var/www/html/storage/framework/cache
+            - name: storage-framework-sessions
+              mountPath: /var/www/html/storage/framework/sessions
+            - name: storage-framework-testing
+              mountPath: /var/www/html/storage/framework/testing
       volumes:
         - name: app-env
           configMap:
             name: {{ include "master-laravel.fullname" . }}-env
+        - name: bootstrap-cache
+          emptyDir: {}
+        - name: storage-framework
+          emptyDir: {}
+        - name: storage-framework-views
+          emptyDir: {}
+        - name: storage-framework-cache
+          emptyDir: {}
+        - name: storage-framework-sessions
+          emptyDir: {}
+        - name: storage-framework-testing
+          emptyDir: {}
