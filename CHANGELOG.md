@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.9.9](https://github.com/steven-streller/master-laravel/compare/v1.9.8...v1.9.9) (2025-08-27)
+
+
+### Bug Fixes
+
+* add logging of test results to coverage check step ([afd5277](https://github.com/steven-streller/master-laravel/commit/afd52773c37fdb0c1402f0f115bf846a94ce2c0e))
+* redirect PHPUnit output to result.log and update database configuration for tests ([3c55682](https://github.com/steven-streller/master-laravel/commit/3c556827e38442ebf30397ff7334c624d330bdb2))
+* remove result.log output from PHPUnit command ([f721b59](https://github.com/steven-streller/master-laravel/commit/f721b59ab5cf4a1dafd26d9d75fa4598ee817a7d))
+* update database configuration for PHPUnit to use in-memory SQLite ([b7ab84d](https://github.com/steven-streller/master-laravel/commit/b7ab84d1caba96ba0db357b5193d0cf5f365e97a))
+
 ## [1.9.8](https://github.com/steven-streller/master-laravel/compare/v1.9.7...v1.9.8) (2025-08-27)
 
 
