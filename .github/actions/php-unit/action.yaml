@@ -21,14 +21,13 @@ runs:
       shell: bash
 
     - name: Execute tests with coverage
-      run: ./vendor/bin/phpunit --coverage-text --colors=always --no-progress > result.log
+      run: ./vendor/bin/phpunit --coverage-text --colors=always --no-progress
       shell: bash
 
     - name: Check coverage threshold
       if: inputs.coverage-gate == 'true'
       run: |
         COVERAGE=$(grep -Po 'Lines:\s+\K[0-9\.]+' result.log | head -1)
-        cat result.log
         echo "Detected coverage: $COVERAGE%"
         THRESHOLD=${{ inputs.coverage-threshold }}
         if (( $(echo "$COVERAGE < $THRESHOLD" | bc -l) )); then
