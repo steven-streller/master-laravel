@@ -1,0 +1,58 @@
+{{- if .Values.redis.enabled }}
+
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: {{ include "master-laravel.fullname" . }}-redis
+  namespace: {{ .Release.Namespace }}
+  labels:
+    app: {{ include "master-laravel.name" . }}
+    component: redis
+spec:
+  serviceName: {{ include "master-laravel.fullname" . }}-redis
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ include "master-laravel.name" . }}
+      component: redis
+  template:
+    metadata:
+      labels:
+        app: {{ include "master-laravel.name" . }}
+        component: redis
+    spec:
+      securityContext:
+        runAsUser: 100
+        runAsGroup: 101
+        fsGroup: 101
+      containers:
+        - name: redis
+          image: {{ .Values.redis.image.repository }}:{{ .Values.redis.image.tag }}
+          imagePullPolicy: {{ .Values.redis.image.pullPolicy | default "IfNotPresent" }}
+          ports:
+            - containerPort: 6379
+              name: redis
+          securityContext:
+            runAsNonRoot: true
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            capabilities:
+              drop:
+                - ALL
+          volumeMounts:
+            - name: data
+              mountPath: /data
+            - name: tmp
+              mountPath: /tmp
+      volumes:
+        - name: tmp
+          emptyDir: {}
+  volumeClaimTemplates:
+    - metadata:
+        name: data
+      spec:
+        accessModes: [ "ReadWriteOnce" ]
+        resources:
+          requests:
+            storage: {{ .Values.redis.persistence.size | default "8Gi" }}
+{{- end }}

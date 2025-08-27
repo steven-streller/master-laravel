@@ -51,3 +51,10 @@ mysql:
   password: password
   persistence:
     size: 8Gi
+redis:
+  enabled: true
+  image:
+    repository: redis
+    tag: 8.2.1-alpine3.22
+  persistence:
+    size: 8Gi
