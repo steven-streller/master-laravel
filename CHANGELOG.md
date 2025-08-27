@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.10.0](https://github.com/steven-streller/master-laravel/compare/v1.9.10...v1.10.0) (2025-08-27)
+
+
+### Features
+
+* **redis:** added redis to helm chart ([eec12d3](https://github.com/steven-streller/master-laravel/commit/eec12d323770b1e806ee3deed28eb4a5638ded3e))
+
 ## [1.9.10](https://github.com/steven-streller/master-laravel/compare/v1.9.9...v1.9.10) (2025-08-27)
 
 
