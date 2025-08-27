@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.9.10](https://github.com/steven-streller/master-laravel/compare/v1.9.9...v1.9.10) (2025-08-27)
+
+
+### Bug Fixes
+
+* enhance security context and volume management for app, mysql, and nginx deployments ([3c6b824](https://github.com/steven-streller/master-laravel/commit/3c6b82401a5b43a4f0f72f11c434ed30dc3a66d9))
+* update environment configuration for production deployment ([e471f74](https://github.com/steven-streller/master-laravel/commit/e471f74484d001ca9b547460441c42fe3a669517))
+
 ## [1.9.9](https://github.com/steven-streller/master-laravel/compare/v1.9.8...v1.9.9) (2025-08-27)
 
 
