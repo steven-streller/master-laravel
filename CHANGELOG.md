@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.7](https://github.com/steven-streller/master-laravel/compare/v1.9.6...v1.9.7) (2025-08-27)
+
+
+### Bug Fixes
+
+* **docker:** correct ownership for bootstrap/cache in Dockerfile ([41c7cc7](https://github.com/steven-streller/master-laravel/commit/41c7cc7cf138520aedaa3613d6c0e2d047cb09ec))
+
 ## [1.9.6](https://github.com/steven-streller/master-laravel/compare/v1.9.5...v1.9.6) (2025-08-27)
 
 
