@@ -36,7 +36,8 @@ RUN chown root:root /var/www/html && chmod 755 /var/www/html
 RUN mkdir -p  storage/framework/cache \
               storage/framework/sessions \
               storage/framework/views \
-          &&  chown -R www-data:www-data storage
+              bootstrap/cache \
+          &&  chown -R www-data:www-data storage bootstrap/cache
 
 # Artefakte aus den vorherigen Stages
 COPY public/index.php public/index.php
@@ -47,7 +48,7 @@ COPY --from=nodebuild /app/public/build/manifest.json ./public/build/manifest.js
 
 COPY --chmod=644 artisan artisan
 COPY app/ app/
-COPY --chown=www-data:www-data bootstrap/ bootstrap/
+COPY --chown=www-data:www-data bootstrap/app.php bootstrap/providers.php bootstrap/
 COPY config/ config/
 COPY database/ database/
 COPY routes/ routes/

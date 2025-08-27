@@ -38,7 +38,7 @@ To run this prototype locally with Docker Compose, use the following setup:
 
 ```yaml
 services:
-  app:
+  master-laravel-app:
     image: ghcr.io/steven-streller/master-laravel-app:v1.0.0
     restart: unless-stopped
     volumes:
@@ -47,12 +47,12 @@ services:
       - 9000
     depends_on:
       - mysql
-  nginx:
+  master-laravel-nginx:
     image: ghcr.io/steven-streller/master-laravel-nginx:v1.0.0
     ports:
       - "80:80"
     depends_on:
-      - app
+      - master-laravel-app
   mysql:
     image: mysql:9.4.0
     container_name: mysql
