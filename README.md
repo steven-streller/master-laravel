@@ -32,14 +32,25 @@ This prototype uses a **multi-container architecture** to separate concerns and 
 
 All containers communicate via a Docker network. This setup allows for independent scaling, easier updates, and clear separation of responsibilities—making it suitable for CI/CD, container security scanning, and production
 
+
+
 # Getting Started
 
-To run this prototype locally with Docker Compose, use the following setup:
+## Docker Compose Example
+
+To always use the latest release, you can fetch the most recent tag from GitHub and use it in your Docker Compose setup:
+
+```bash
+export LATEST_TAG=$(curl -s https://api.github.com/repos/steven-streller/master-laravel/releases/latest | grep tag_name | cut -d '"' -f4)
+echo $LATEST_TAG
+```
+
+You can now use the `$LATEST_TAG` variable in your `docker-compose.yaml` to always pull the latest images:
 
 ```yaml
 services:
   master-laravel-app:
-    image: ghcr.io/steven-streller/master-laravel-app:v1.0.0
+    image: ghcr.io/steven-streller/master-laravel-app:${LATEST_TAG}
     restart: unless-stopped
     volumes:
       - .env:/var/www/html/.env
@@ -48,7 +59,7 @@ services:
     depends_on:
       - mysql
   master-laravel-nginx:
-    image: ghcr.io/steven-streller/master-laravel-nginx:v1.0.0
+    image: ghcr.io/steven-streller/master-laravel-nginx:${LATEST_TAG}
     ports:
       - "80:80"
     depends_on:
@@ -68,7 +79,7 @@ services:
       - 3306
 ```
 
-## Setup steps:
+## Setup Steps
 
 1. Copy `.env.example` to `.env` and adjust the following values if needed:
     ```env
