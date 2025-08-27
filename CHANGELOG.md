@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.10.1](https://github.com/steven-streller/master-laravel/compare/v1.10.0...v1.10.1) (2025-08-27)
+
+
+### Bug Fixes
+
+* **helm:** use templating ([ea63673](https://github.com/steven-streller/master-laravel/commit/ea6367323aaebc0f5026cfde186c971c4286d306))
+* **redis:** enhance security ([98f0787](https://github.com/steven-streller/master-laravel/commit/98f078706a5eee37410cbc01d0735d60578792cc))
+
 ## [1.10.0](https://github.com/steven-streller/master-laravel/compare/v1.9.10...v1.10.0) (2025-08-27)
 
 
