@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.10.5](https://github.com/steven-streller/master-laravel/compare/v1.10.4...v1.10.5) (2025-08-28)
+
+
+### Bug Fixes
+
+* **routes:** correct Redis health check response handling ([4908864](https://github.com/steven-streller/master-laravel/commit/49088642f79480f7c35dd146d2bfdf6f67f14f12))
+
 ## [1.10.4](https://github.com/steven-streller/master-laravel/compare/v1.10.3...v1.10.4) (2025-08-28)
 
 
