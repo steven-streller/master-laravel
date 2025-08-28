@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.11.0](https://github.com/steven-streller/master-laravel/compare/v1.10.5...v1.11.0) (2025-08-28)
+
+
+### Features
+
+* **docker:** add Redis extension installation in Dockerfile ([2fa6335](https://github.com/steven-streller/master-laravel/commit/2fa6335fcb2d0e1176f63ec8765f5fa0226de8a1))
+
 ## [1.10.5](https://github.com/steven-streller/master-laravel/compare/v1.10.4...v1.10.5) (2025-08-28)
 
 
