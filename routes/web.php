@@ -25,7 +25,7 @@ Route::get('/healthz', function () {
     try {
         DB::connection()->getPdo();
         $redisOk = Redis::command('ping');
-        if ($redisOk === 'PONG') {
+        if ($redisOk === true) {
             return Response::make('OK');
         }
     } catch (\Throwable $e) {
