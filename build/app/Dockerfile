@@ -26,6 +26,11 @@ FROM php:8.4-fpm-alpine3.22@sha256:5f54968e4f26b46e8d6f4b1f3b65b115b3279bd60c737
 # PHP-Erweiterungen für Laravel
 RUN docker-php-ext-install pdo pdo_mysql
 
+RUN apk add --no-cache --virtual .build-deps $PHPIZE_DEPS \
+    && pecl install redis-6.2.0 \
+    && docker-php-ext-enable redis \
+    && apk del .build-deps
+
 # FPM Pool-Konfiguration kopieren
 COPY ./build/app/www.conf /usr/local/etc/php-fpm.d/www.conf
 
