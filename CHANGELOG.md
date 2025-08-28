@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.11.2](https://github.com/steven-streller/master-laravel/compare/v1.11.1...v1.11.2) (2025-08-28)
+
+
+### Bug Fixes
+
+* **network-policy:** update component label in ingress rules for Redis ([00c82d4](https://github.com/steven-streller/master-laravel/commit/00c82d457da8312d5386604776837a57fae2b663))
+
 ## [1.11.1](https://github.com/steven-streller/master-laravel/compare/v1.11.0...v1.11.1) (2025-08-28)
 
 
