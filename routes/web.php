@@ -24,8 +24,8 @@ Route::get('/readyz', function () {
 Route::get('/healthz', function () {
     try {
         DB::connection()->getPdo();
-        $redisOk = Redis::connection()->client()->ping();
-        if ($redisOk === true) {
+        $redisOk = Redis::command('ping');
+        if ($redisOk === 'PONG') {
             return Response::make('OK');
         }
     } catch (\Throwable $e) {
