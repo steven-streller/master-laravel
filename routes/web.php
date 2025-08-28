@@ -1,9 +1,9 @@
 <?php
 
-use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Response;
-use Illuminate\Support\Facades\Route;
+use \Illuminate\Support\Facades\Redis;
 
 Route::get('/', function () {
     return view('welcome');
@@ -13,7 +13,7 @@ Route::get('/livez', fn () => response()->json(['status' => 'live']));
 
 Route::get('/readyz', function () {
     try {
-        \DB::connection()->getPdo();
+        DB::connection()->getPdo();
 
         return response()->json(['status' => 'ready']);
     } catch (\Exception $e) {
@@ -24,9 +24,9 @@ Route::get('/readyz', function () {
 Route::get('/healthz', function () {
     try {
         DB::connection()->getPdo();
-        $redisOk = Cache::store('redis')->ping() === '+PONG';
-        if ($redisOk) {
-            return Response::make('OK', 200);
+        $redisOk = Redis::connection()->client()->ping();
+        if ($redisOk === true) {
+            return Response::make('OK');
         }
     } catch (\Throwable $e) {
         return Response::make('Unhealthy', 500);
