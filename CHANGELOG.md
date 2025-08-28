@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.10.4](https://github.com/steven-streller/master-laravel/compare/v1.10.3...v1.10.4) (2025-08-28)
+
+
+### Miscellaneous Chores
+
+* trigger release-please ([8af3627](https://github.com/steven-streller/master-laravel/commit/8af3627f286f967a8cd372ceaa143dbfd6769ea9))
+
 ## [1.10.3](https://github.com/steven-streller/master-laravel/compare/v1.10.2...v1.10.3) (2025-08-28)
 
 

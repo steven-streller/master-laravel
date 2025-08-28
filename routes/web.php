@@ -31,5 +31,6 @@ Route::get('/healthz', function () {
     } catch (\Throwable $e) {
         return Response::make('Unhealthy', 500);
     }
+
     return Response::make('Unhealthy', 500);
 });
