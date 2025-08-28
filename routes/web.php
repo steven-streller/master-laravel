@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Response;
 
 Route::get('/', function () {
     return view('welcome');
@@ -19,16 +22,14 @@ Route::get('/readyz', function () {
 });
 
 Route::get('/healthz', function () {
-    $checks = [];
-    $status = 200;
-
     try {
-        \DB::connection()->getPdo();
-        $checks['db'] = 'ok';
-    } catch (\Exception $e) {
-        $checks['db'] = 'fail';
-        $status = 503;
+        DB::connection()->getPdo();
+        $redisOk = Cache::store('redis')->ping() === '+PONG';
+        if ($redisOk) {
+            return Response::make('OK', 200);
+        }
+    } catch (\Throwable $e) {
+        return Response::make('Unhealthy', 500);
     }
-
-    return response()->json(['status' => $status === 200 ? 'healthy' : 'unhealthy', 'checks' => $checks], $status);
+    return Response::make('Unhealthy', 500);
 });
