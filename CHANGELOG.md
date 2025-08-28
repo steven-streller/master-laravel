@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.11.3](https://github.com/steven-streller/master-laravel/compare/v1.11.2...v1.11.3) (2025-08-28)
+
+
+### Bug Fixes
+
+* **config-map:** update session and queue drivers to use Redis ([957601e](https://github.com/steven-streller/master-laravel/commit/957601ed2bfcb02e0a4b0dd605dfde24fc4d2709))
+* **network-policy:** remove empty egress rules for Redis ([957601e](https://github.com/steven-streller/master-laravel/commit/957601ed2bfcb02e0a4b0dd605dfde24fc4d2709))
+
 ## [1.11.2](https://github.com/steven-streller/master-laravel/compare/v1.11.1...v1.11.2) (2025-08-28)
 
 
