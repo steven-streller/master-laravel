@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.10.3](https://github.com/steven-streller/master-laravel/compare/v1.10.2...v1.10.3) (2025-08-28)
+
+
+### Miscellaneous Chores
+
+* **nginx:** enhance static file caching and security headers in default.conf ([59c90ea](https://github.com/steven-streller/master-laravel/commit/59c90ea4c46bedad3078f8286eada03eec1cc194))
+
 ## [1.10.2](https://github.com/steven-streller/master-laravel/compare/v1.10.1...v1.10.2) (2025-08-28)
 
 
