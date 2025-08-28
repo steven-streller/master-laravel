@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.10.2](https://github.com/steven-streller/master-laravel/compare/v1.10.1...v1.10.2) (2025-08-28)
+
+
+### Miscellaneous Chores
+
+* **deps-dev:** bump laravel/sail from 1.44.0 to 1.45.0 ([39b237a](https://github.com/steven-streller/master-laravel/commit/39b237a75603c55e22b2d5a77e311a1cf04c0e0d))
+* **deps-dev:** bump laravel/sail from 1.44.0 to 1.45.0 ([a080207](https://github.com/steven-streller/master-laravel/commit/a0802072f9f1d65c5747b235c9c67ee16a47a702))
+* **deps:** bump laravel/framework from 12.26.0 to 12.26.2 ([de5d6e9](https://github.com/steven-streller/master-laravel/commit/de5d6e982116ee6638ddb223637f2129b5494e1b))
+* **deps:** bump laravel/framework from 12.26.0 to 12.26.2 ([c85f760](https://github.com/steven-streller/master-laravel/commit/c85f760e0fd68967cc9d73d754b7a0e7e7cfacb9))
+
 ## [1.10.1](https://github.com/steven-streller/master-laravel/compare/v1.10.0...v1.10.1) (2025-08-27)
 
 
