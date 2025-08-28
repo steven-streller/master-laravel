@@ -26,7 +26,11 @@ FROM php:8.4-fpm-alpine3.22@sha256:5f54968e4f26b46e8d6f4b1f3b65b115b3279bd60c737
 # PHP-Erweiterungen für Laravel
 RUN docker-php-ext-install pdo pdo_mysql
 
-RUN apk add --no-cache --virtual .build-deps $PHPIZE_DEPS \
+# Abhängigkeiten von apk add kommen aus $PHPIZE_DEPS
+RUN apk add --no-cache --virtual .build-deps \ 
+        autoconf-2.72-r1 dpkg-dev-1.22.15-r0 dpkg-1.22.15-r0 \
+        file-5.46-r2 g++-14.2.0-r6 gcc-14.2.0-r6 musl-dev-1.2.5-r10 \ 
+        make-4.4.1-r3 pkgconf-2.4.3-r0 re2c-4.2-r0 \
     && pecl install redis-6.2.0 \
     && docker-php-ext-enable redis \
     && apk del .build-deps
