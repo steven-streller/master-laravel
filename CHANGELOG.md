@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.11.1](https://github.com/steven-streller/master-laravel/compare/v1.11.0...v1.11.1) (2025-08-28)
+
+
+### Bug Fixes
+
+* **Dockerfile:** correct syntax for package installation in build dependencies ([b6f5d34](https://github.com/steven-streller/master-laravel/commit/b6f5d34c956369b742af262be90116eaa70f1f0c))
+* **Dockerfile:** update build dependencies for PHP extensions ([d690380](https://github.com/steven-streller/master-laravel/commit/d690380cb228797c43e1f55f949a1fffe4907181))
+* **routes:** update Redis health check condition to use boolean comparison ([e4c9bb7](https://github.com/steven-streller/master-laravel/commit/e4c9bb75672848afb5b53e1925b8e25fb8c1a4de))
+
+
+### Miscellaneous Chores
+
+* trigger release-please ([dacf066](https://github.com/steven-streller/master-laravel/commit/dacf066a91efaf87ca8121a8e252af0d1e248572))
+
 ## [1.11.0](https://github.com/steven-streller/master-laravel/compare/v1.10.5...v1.11.0) (2025-08-28)
 
 
