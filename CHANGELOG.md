@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.11.5](https://github.com/steven-streller/master-laravel/compare/v1.11.4...v1.11.5) (2025-08-30)
+
+
+### Bug Fixes
+
+* **security:** add seccomp profiles to deployments and stateful sets ([f1d26dc](https://github.com/steven-streller/master-laravel/commit/f1d26dc2f5c4f98dd785d049158a1ff0e747cf1a))
+
 ## [1.11.4](https://github.com/steven-streller/master-laravel/compare/v1.11.3...v1.11.4) (2025-08-30)
 
 
