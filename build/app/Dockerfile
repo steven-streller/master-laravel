@@ -21,7 +21,7 @@ COPY composer.json composer.lock ./
 RUN composer install --no-dev --no-scripts --optimize-autoloader
 
 # === Stage 3: PHP mit FPM-Alpine ===
-FROM php:8.4-fpm-alpine3.22@sha256:5f54968e4f26b46e8d6f4b1f3b65b115b3279bd60c7371169e413ba6a439e5f8
+FROM php:8.4-fpm-alpine3.22@sha256:999f910cc872e4930d2d5c4b91d80ed712e8cf77ba173c729127bfdc5fddfb88
 
 # PHP-Erweiterungen für Laravel
 RUN docker-php-ext-install pdo pdo_mysql
