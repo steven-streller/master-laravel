@@ -44,7 +44,7 @@ mysql:
   enabled: true
   image:
     repository: mysql
-    tag: 9.4.0
+    tag: 8.4.6
   rootPassword: root
   database: laravel
   user: user
