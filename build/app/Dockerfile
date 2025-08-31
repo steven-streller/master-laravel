@@ -1,5 +1,5 @@
 # === Stage 1: Node.js - Asset Build ===
-FROM node:24.6.0-alpine3.22@sha256:51dbfc749ec3018c7d4bf8b9ee65299ff9a908e38918ce163b0acfcd5dd931d9 AS nodebuild
+FROM node:24.7.0-alpine3.22@sha256:be4d5e92ac68483ec71440bf5934865b4b7fcb93588f17a24d411d15f0204e4f AS nodebuild
 WORKDIR /app
 
 # Nur package files für besseren Cache
@@ -13,7 +13,7 @@ COPY resources ./resources
 RUN npm run build
 
 # === Stage 2: Composer - PHP Dependencies ===
-FROM composer:2.8.11@sha256:d013f2c06509ff0a06342f67a7fc062deebda2c36e17b415b035f1299dcd181e AS composer
+FROM composer:2.8.11@sha256:349764137f79cd1a95b055f9a1546cb558a74c9ae1ae8c1c7128d772cc504270 AS composer
 WORKDIR /app
 
 COPY composer.json composer.lock ./
@@ -21,7 +21,7 @@ COPY composer.json composer.lock ./
 RUN composer install --no-dev --no-scripts --optimize-autoloader
 
 # === Stage 3: PHP mit FPM-Alpine ===
-FROM php:8.4-fpm-alpine3.22@sha256:5f54968e4f26b46e8d6f4b1f3b65b115b3279bd60c7371169e413ba6a439e5f8
+FROM php:8.4-fpm-alpine3.22@sha256:999f910cc872e4930d2d5c4b91d80ed712e8cf77ba173c729127bfdc5fddfb88
 
 # PHP-Erweiterungen für Laravel
 RUN docker-php-ext-install pdo pdo_mysql

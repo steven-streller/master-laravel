@@ -1,5 +1,61 @@
 # Changelog
 
+## [1.11.5](https://github.com/steven-streller/master-laravel/compare/v1.11.4...v1.11.5) (2025-08-30)
+
+
+### Bug Fixes
+
+* **security:** add seccomp profiles to deployments and stateful sets ([f1d26dc](https://github.com/steven-streller/master-laravel/commit/f1d26dc2f5c4f98dd785d049158a1ff0e747cf1a))
+
+## [1.11.4](https://github.com/steven-streller/master-laravel/compare/v1.11.3...v1.11.4) (2025-08-30)
+
+
+### Miscellaneous Chores
+
+* **deps-dev:** bump phpunit/phpunit from 12.3.6 to 12.3.7 ([44501d9](https://github.com/steven-streller/master-laravel/commit/44501d9fb280531e9518a89c11a9d6da21d2a07c))
+* **deps-dev:** bump phpunit/phpunit from 12.3.6 to 12.3.7 ([6691db6](https://github.com/steven-streller/master-laravel/commit/6691db6961c9f87aa8a4bc0296f78f7c8a9df6ca))
+* **deps:** bump aquasecurity/trivy-action from 0.32.0 to 0.33.0 ([e0dc3ce](https://github.com/steven-streller/master-laravel/commit/e0dc3ce3e303ca7130509bd8a412dc0bf4f75189))
+* **deps:** bump aquasecurity/trivy-action from 0.32.0 to 0.33.0 ([3ac84e8](https://github.com/steven-streller/master-laravel/commit/3ac84e8704948542331dbef22fb80beeb7f9cf6c))
+* **deps:** bump composer from `d013f2c` to `3497641` in /build/app ([e0e867c](https://github.com/steven-streller/master-laravel/commit/e0e867c38a56c74994ee04202265ca9e6ed9aade))
+* **deps:** bump composer from `d013f2c` to `3497641` in /build/app ([691f384](https://github.com/steven-streller/master-laravel/commit/691f38496fe297f9e20da9ed24ce9e77c901363e))
+* **deps:** bump laravel/framework from 12.26.2 to 12.26.3 ([b0a341d](https://github.com/steven-streller/master-laravel/commit/b0a341d815a4cc9b13dc2db2f5dcf3ad2f35b716))
+* **deps:** bump laravel/framework from 12.26.2 to 12.26.3 ([b13a967](https://github.com/steven-streller/master-laravel/commit/b13a9670abb15772ab4a5de515c4153e95eb6f60))
+* **deps:** bump node from 24.6.0-alpine3.22 to 24.7.0-alpine3.22 in /build/app ([d463eb9](https://github.com/steven-streller/master-laravel/commit/d463eb9d5eaa0308d4c25d1b60ab9d2256d4db42))
+* **deps:** bump node from 24.6.0-alpine3.22 to 24.7.0-alpine3.22 in /build/nginx ([0e882fe](https://github.com/steven-streller/master-laravel/commit/0e882fe691094cf6125af3ee5bbcef7c01187ccb))
+* **deps:** bump node in /build/app ([0a11690](https://github.com/steven-streller/master-laravel/commit/0a116908fa639f1eb2574a50836c101882df213c))
+* **deps:** bump node in /build/nginx ([ae770e9](https://github.com/steven-streller/master-laravel/commit/ae770e914f880bdfbdec618b9aa8f035a31b2eea))
+* **deps:** bump php from `5f54968` to `999f910` in /build/app ([d5af22e](https://github.com/steven-streller/master-laravel/commit/d5af22e486df816644b71b8537bb46cb6525aa45))
+* **deps:** bump php from `5f54968` to `999f910` in /build/app ([3289553](https://github.com/steven-streller/master-laravel/commit/32895535e56acb9683669ea621eb3b7c22d9e5fa))
+
+## [1.11.3](https://github.com/steven-streller/master-laravel/compare/v1.11.2...v1.11.3) (2025-08-28)
+
+
+### Bug Fixes
+
+* **config-map:** update session and queue drivers to use Redis ([957601e](https://github.com/steven-streller/master-laravel/commit/957601ed2bfcb02e0a4b0dd605dfde24fc4d2709))
+* **network-policy:** remove empty egress rules for Redis ([957601e](https://github.com/steven-streller/master-laravel/commit/957601ed2bfcb02e0a4b0dd605dfde24fc4d2709))
+
+## [1.11.2](https://github.com/steven-streller/master-laravel/compare/v1.11.1...v1.11.2) (2025-08-28)
+
+
+### Bug Fixes
+
+* **network-policy:** update component label in ingress rules for Redis ([00c82d4](https://github.com/steven-streller/master-laravel/commit/00c82d457da8312d5386604776837a57fae2b663))
+
+## [1.11.1](https://github.com/steven-streller/master-laravel/compare/v1.11.0...v1.11.1) (2025-08-28)
+
+
+### Bug Fixes
+
+* **Dockerfile:** correct syntax for package installation in build dependencies ([b6f5d34](https://github.com/steven-streller/master-laravel/commit/b6f5d34c956369b742af262be90116eaa70f1f0c))
+* **Dockerfile:** update build dependencies for PHP extensions ([d690380](https://github.com/steven-streller/master-laravel/commit/d690380cb228797c43e1f55f949a1fffe4907181))
+* **routes:** update Redis health check condition to use boolean comparison ([e4c9bb7](https://github.com/steven-streller/master-laravel/commit/e4c9bb75672848afb5b53e1925b8e25fb8c1a4de))
+
+
+### Miscellaneous Chores
+
+* trigger release-please ([dacf066](https://github.com/steven-streller/master-laravel/commit/dacf066a91efaf87ca8121a8e252af0d1e248572))
+
 ## [1.11.0](https://github.com/steven-streller/master-laravel/compare/v1.10.5...v1.11.0) (2025-08-28)
 
 

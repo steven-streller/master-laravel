@@ -23,15 +23,15 @@ data:
     DB_USERNAME=user
     DB_PASSWORD=password
 
-    SESSION_DRIVER=database
+    SESSION_DRIVER=redis
     SESSION_LIFETIME=120
     SESSION_ENCRYPT=true
 
     BROADCAST_CONNECTION=log
     FILESYSTEM_DISK=local
-    QUEUE_CONNECTION=database
+    QUEUE_CONNECTION=redis
 
-    CACHE_STORE=database
+    CACHE_STORE=redis
 
     REDIS_CLIENT=phpredis
     REDIS_HOST={{ include "master-laravel.fullname" . }}-redis

@@ -18,6 +18,8 @@ spec:
         app: {{ include "master-laravel.name" . }}
         component: app
     spec:
+      securityContext:
+
       containers:
         - name: app
           securityContext:
@@ -26,6 +28,8 @@ spec:
             runAsNonRoot: true
             allowPrivilegeEscalation: false
             readOnlyRootFilesystem: true
+            seccompProfile:
+              type: RuntimeDefault
             capabilities:
               drop:
                 - ALL
