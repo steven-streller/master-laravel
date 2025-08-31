@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.11.6](https://github.com/steven-streller/master-laravel/compare/v1.11.5...v1.11.6) (2025-08-31)
+
+
+### Bug Fixes
+
+* **values.yaml:** update MySQL image tag to 8.4.6 ([4b999d9](https://github.com/steven-streller/master-laravel/commit/4b999d913e54b6ff341ed783008f94136857e440))
+
 ## [1.11.5](https://github.com/steven-streller/master-laravel/compare/v1.11.4...v1.11.5) (2025-08-30)
 
 

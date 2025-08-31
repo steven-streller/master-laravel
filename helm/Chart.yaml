@@ -4,5 +4,5 @@ description: >-
   A Helm chart to deploy a Laravel monolith with Nginx and MySQL, optimized for
   DevOps and DevSecOps evaluation.
 type: application
-version: 1.11.5
-appVersion: 1.11.5
+version: 1.11.6
+appVersion: 1.11.6
