@@ -72,13 +72,13 @@ jobs:
         uses: actions/dependency-review-action@v4
 
       - name: "Lint app Dockerfile (Hadolint)"
-        uses: hadolint/hadolint-action@v3.1.0
+        uses: hadolint/hadolint-action@v3.2.0
         with:
           dockerfile: ./build/app/Dockerfile
           failure-threshold: warning
       
       - name: "Lint nginx Dockerfile (Hadolint)"
-        uses: hadolint/hadolint-action@v3.1.0
+        uses: hadolint/hadolint-action@v3.2.0
         with:
           dockerfile: ./build/nginx/Dockerfile
           failure-threshold: warning
