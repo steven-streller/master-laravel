@@ -2,7 +2,7 @@ app:
   replicaCount: 1
   image:
     repository: ghcr.io/steven-streller/master-laravel-app
-    tag: 1.11.6
+    tag: 1.11.7
     pullPolicy: IfNotPresent
   resources:
     requests:
@@ -20,7 +20,7 @@ nginx:
   replicaCount: 1
   image:
     repository: ghcr.io/steven-streller/master-laravel-nginx
-    tag: 1.11.6
+    tag: 1.11.7
     pullPolicy: IfNotPresent
   resources:
     requests:
