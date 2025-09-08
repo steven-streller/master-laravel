@@ -1,5 +1,29 @@
 # Changelog
 
+## [1.11.7](https://github.com/steven-streller/master-laravel/compare/v1.11.6...v1.11.7) (2025-09-08)
+
+
+### Miscellaneous Chores
+
+* **deps-dev:** bump phpunit/phpunit from 12.3.7 to 12.3.8 ([e0b389f](https://github.com/steven-streller/master-laravel/commit/e0b389f4bf58b9e08ae3a5786c13e2b6ba42d5db))
+* **deps-dev:** bump phpunit/phpunit from 12.3.7 to 12.3.8 ([fc32879](https://github.com/steven-streller/master-laravel/commit/fc328799b448c3d1b8b89435cf3ccb308dbb46da))
+* **deps-dev:** bump sass from 1.91.0 to 1.92.0 ([10a675a](https://github.com/steven-streller/master-laravel/commit/10a675a7e987d3fdbeafc807192607908ba267f1))
+* **deps-dev:** bump sass from 1.91.0 to 1.92.0 ([d253759](https://github.com/steven-streller/master-laravel/commit/d253759a11d3a2e96d2828685b9206146f5eee09))
+* **deps-dev:** bump sass from 1.92.0 to 1.92.1 ([9cbe1f3](https://github.com/steven-streller/master-laravel/commit/9cbe1f32e3dff01780722aa28653f2d73b72d893))
+* **deps-dev:** bump sass from 1.92.0 to 1.92.1 ([7f5fac1](https://github.com/steven-streller/master-laravel/commit/7f5fac16356437cca8e7d6808b05b73d3543acf1))
+* **deps-dev:** bump vite from 7.1.3 to 7.1.5 ([2da3d1b](https://github.com/steven-streller/master-laravel/commit/2da3d1bf4cce13ead1aabad3aeb0afcdd8eaf03e))
+* **deps-dev:** bump vite from 7.1.3 to 7.1.5 ([dc68ca2](https://github.com/steven-streller/master-laravel/commit/dc68ca22d73b73b6699f53cc78149515e2fcd533))
+* **deps:** bump aquasecurity/trivy-action from 0.33.0 to 0.33.1 ([db0b813](https://github.com/steven-streller/master-laravel/commit/db0b813fb4702589aef26dafc04d54febb6bb634))
+* **deps:** bump aquasecurity/trivy-action from 0.33.0 to 0.33.1 ([9481754](https://github.com/steven-streller/master-laravel/commit/948175453b915c21dc4fa9ef8d824bceb1e094ae))
+* **deps:** bump composer from `3497641` to `68e926a` in /build/app ([eb03b7a](https://github.com/steven-streller/master-laravel/commit/eb03b7a572e65bbcc5dcc16b523c418ff635774e))
+* **deps:** bump composer from `3497641` to `68e926a` in /build/app ([ba6b601](https://github.com/steven-streller/master-laravel/commit/ba6b6015f4b8063234f26d55143d32dbb01aba72))
+* **deps:** bump hadolint/hadolint-action from 3.1.0 to 3.2.0 ([ca4a2a0](https://github.com/steven-streller/master-laravel/commit/ca4a2a0175989d8da23ff79cdef422ffb3aee302))
+* **deps:** bump hadolint/hadolint-action from 3.1.0 to 3.2.0 ([9f1745d](https://github.com/steven-streller/master-laravel/commit/9f1745da83da93dce37497f768439c7931c75959))
+* **deps:** bump laravel/framework from 12.26.3 to 12.28.1 ([f6fc73a](https://github.com/steven-streller/master-laravel/commit/f6fc73a7022ff17ff5e9b717811a047987110f2f))
+* **deps:** bump laravel/framework from 12.26.3 to 12.28.1 ([c1337a1](https://github.com/steven-streller/master-laravel/commit/c1337a1bb3737edc9f78be74a5b3e69283522507))
+* **deps:** bump mysql from 8.4.6 to 9.4.0 in /helm ([3b094a8](https://github.com/steven-streller/master-laravel/commit/3b094a83b4f02ea8be616c1fbbddf5aa96fd0881))
+* **deps:** bump mysql from 8.4.6 to 9.4.0 in /helm ([55b0fd3](https://github.com/steven-streller/master-laravel/commit/55b0fd3b29347338c490c78c08edd514ea952c3c))
+
 ## [1.11.6](https://github.com/steven-streller/master-laravel/compare/v1.11.5...v1.11.6) (2025-08-31)
 
 
