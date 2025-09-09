@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.11.8](https://github.com/steven-streller/master-laravel/compare/v1.11.7...v1.11.8) (2025-09-09)
+
+
+### Bug Fixes
+
+* **nginx:** update port configuration from 80 to 8080 in Dockerfile, default.conf, deployment.yaml, and service.yaml ([1d372f6](https://github.com/steven-streller/master-laravel/commit/1d372f62f2ee99c68190d86d4c4b878d567ee4b9))
+
 ## [1.11.7](https://github.com/steven-streller/master-laravel/compare/v1.11.6...v1.11.7) (2025-09-08)
 
 
