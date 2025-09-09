@@ -17,9 +17,55 @@ spec:
       labels:
         app: {{ include "master-laravel.name" . }}
         component: app
-    spec:
-      securityContext:
+      annotations:
+        vault.hashicorp.com/agent-inject: "true"
+        vault.hashicorp.com/role: "app-role"
 
+        vault.hashicorp.com/agent-service-account-token-volume-name: "vault-sa-token"
+        vault.hashicorp.com/auth-config-token_path: "/var/run/secrets/vault.hashicorp.com/serviceaccount/token"
+        
+        vault.hashicorp.com/agent-inject-secret-.env: "{{ .Release.Namespace }}/data/{{ include \"master-laravel.fullname\" . }}/environments"
+        vault.hashicorp.com/agent-inject-template-.env: |
+          {{- with secret "kv/data/app/config" -}}
+          APP_NAME={{ .Data.data.APP_NAME }}
+          APP_ENV={{ .Data.data.APP_ENV }}
+          APP_KEY={{ .Data.data.APP_KEY }}
+          APP_DEBUG={{ .Data.data.APP_DEBUG }}
+          APP_URL={{ .Data.data.APP_URL }}
+
+          APP_MAINTENANCE_DRIVER={{ .Data.data.APP_MAINTENANCE_DRIVER }}
+
+          LOG_CHANNEL={{ .Data.data.LOG_CHANNEL }}
+          LOG_LEVEL={{ .Data.data.LOG_LEVEL }}
+
+          SESSION_DRIVER={{ .Data.data.SESSION_DRIVER }}
+          SESSION_LIFETIME={{ .Data.data.SESSION_LIFETIME }}
+          SESSION_ENCRYPT={{ .Data.data.SESSION_ENCRYPT }}
+
+          BROADCAST_CONNECTION={{ .Data.data.BROADCAST_CONNECTION }}
+          FILESYSTEM_DISK={{ .Data.data.FILESYSTEM_DISK }}
+          QUEUE_CONNECTION={{ .Data.data.QUEUE_CONNECTION }}
+
+          CACHE_STORE={{ .Data.data.CACHE_STORE }}
+
+          REDIS_CLIENT={{ .Data.data.REDIS_CLIENT }}
+          REDIS_HOST={{ .Data.data.REDIS_HOST }}
+          REDIS_PASSWORD={{ .Data.data.REDIS_PASSWORD }}
+          REDIS_PORT={{ .Data.data.REDIS_PORT }}
+
+          DB_CONNECTION={{ .Data.data.DB_CONNECTION }}
+          DB_HOST={{ .Data.data.DB_HOST }}
+          DB_PORT={{ .Data.data.DB_PORT }}
+          DB_DATABASE={{ .Data.data.DB_DATABASE }}
+          {{- end }}
+          {{ "" }}
+          {{- with secret "database/creds/master-laravel-mysql" -}}
+          DB_USERNAME={{ .Data.username }}
+          DB_PASSWORD={{ .Data.password }}
+          {{- end }}
+    spec:
+      serviceAccountName: {{ include "master-laravel.fullname" . }}
+      securityContext:
       containers:
         - name: app
           securityContext:
@@ -77,6 +123,9 @@ spec:
               mountPath: /var/www/html/storage/framework/sessions
             - name: storage-framework-testing
               mountPath: /var/www/html/storage/framework/testing
+            - name: vault-sa-token
+              mountPath: /var/run/secrets/vault.hashicorp.com/serviceaccount
+              readOnly: true
       volumes:
         - name: app-env
           configMap:
@@ -93,3 +142,10 @@ spec:
           emptyDir: {}
         - name: storage-framework-testing
           emptyDir: {}
+        - name: vault-sa-token
+          projected:
+            sources:
+              - serviceAccountToken:
+                  audience: "vault"
+                  expirationSeconds: 3600
+                  path: token
