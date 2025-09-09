@@ -41,7 +41,7 @@ spec:
               cpu: {{ .Values.app.resources.limits.cpu | default "500m" }}
               memory: {{ .Values.app.resources.limits.memory | default "512Mi" }}
           ports:
-            - containerPort: 80
+            - containerPort: 8080
               protocol: TCP
               name: http
           readinessProbe:
