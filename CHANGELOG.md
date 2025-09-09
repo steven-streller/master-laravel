@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.12.0](https://github.com/steven-streller/master-laravel/compare/v1.11.8...v1.12.0) (2025-09-09)
+
+
+### Features
+
+* **env:** load environment variables from vault directory if available ([869257f](https://github.com/steven-streller/master-laravel/commit/869257f33bb6eeaffe6e9b36b67118606b58309b))
+
 ## [1.11.8](https://github.com/steven-streller/master-laravel/compare/v1.11.7...v1.11.8) (2025-09-09)
 
 
