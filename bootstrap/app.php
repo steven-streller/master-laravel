@@ -1,9 +1,17 @@
 <?php
 
+use Dotenv\Dotenv;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
 use Illuminate\Http\Request;
+
+$vaultDir = '/vault/secrets';
+$vaultFile = $vaultDir.'/.env';
+
+if (is_file($vaultFile) && is_readable($vaultFile) && filesize($vaultFile) > 0) {
+    Dotenv::createImmutable($vaultDir, basename($vaultFile))->load();
+}
 
 return Application::configure(basePath: dirname(__DIR__))
     ->withRouting(
