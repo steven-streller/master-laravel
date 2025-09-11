@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.13.0](https://github.com/steven-streller/master-laravel/compare/v1.12.0...v1.13.0) (2025-09-09)
+
+
+### Features
+
+* **deployment:** enhance vault integration for environment variables and add service account ([065c252](https://github.com/steven-streller/master-laravel/commit/065c252c6cb977ac73108b01e29ac5b96061bb8f))
+
 ## [1.12.0](https://github.com/steven-streller/master-laravel/compare/v1.11.8...v1.12.0) (2025-09-09)
 
 
